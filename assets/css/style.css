@@ -441,6 +441,19 @@ button.chip:hover, a.chip:hover { translate: 0 -2px; background: var(--warm); bo
 .hero__scroll-track { width: 26px; height: 42px; border-radius: 99px; border: 1.5px solid rgba(255, 248, 231, 0.6); display: grid; justify-items: center; padding-top: 7px; }
 .hero__scroll-dot { width: 4px; height: 8px; border-radius: 4px; background: var(--solar); }
 
+/* Enfants qui traversent le hero */
+.kids { position: absolute; left: 0; right: 0; bottom: clamp(104px, 14vh, 150px); height: 0; z-index: 1; pointer-events: none; }
+.runner, .ball { position: absolute; left: 0; bottom: 0; overflow: visible; will-change: transform; transform: translateX(-320px); }
+.runner--boy { width: 132px; height: 165px; }
+.runner--girl { width: 107px; height: 122px; }
+.ball { width: 31px; height: 31px; bottom: -2px; }
+@media (max-width: 768px) {
+  .runner--boy { width: 96px; height: 120px; }
+  .runner--girl { width: 78px; height: 89px; }
+  .ball { width: 23px; height: 23px; }
+  .kids { bottom: 96px; }
+}
+
 @media (max-width: 1024px) {
   .hero__content { grid-template-columns: 1fr; padding-bottom: 300px; }
   .hero__float { display: none; }

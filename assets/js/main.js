@@ -458,6 +458,113 @@
     gsap.to('.hero__scroll-dot', { y: 12, opacity: 0, duration: 1.4, repeat: -1, ease: 'power2.in' });
   }
 
+  /* Aire de jeux : balançoires et tourniquet */
+  function heroPlayground() {
+    gsap.fromTo('.swing-a', { rotation: -24 }, { rotation: 24, svgOrigin: '972 560', duration: 1.25, ease: 'sine.inOut', repeat: -1, yoyo: true });
+    gsap.fromTo('.swing-b', { rotation: 12 }, { rotation: -12, svgOrigin: '1032 560', duration: 1.45, ease: 'sine.inOut', repeat: -1, yoyo: true });
+    var back = $('.carousel__back'), front = $('.carousel__front');
+    if (!back || !front) return;
+    var NS = 'http://www.w3.org/2000/svg';
+    var bars = ['#2D6A4F', '#219EBC', '#C1440E', '#52B788'].map(function (c) {
+      var p = document.createElementNS(NS, 'path');
+      p.setAttribute('fill', 'none'); p.setAttribute('stroke', c); p.setAttribute('stroke-width', '4.5'); p.setAttribute('stroke-linecap', 'round');
+      return p;
+    });
+    var theta = 0;
+    heroTickers.push(function (dt) {
+      theta += dt * 1.6;
+      bars.forEach(function (b, i) {
+        var a = theta + i * Math.PI / 2;
+        var x = 1250 + 60 * Math.cos(a), y = 636 + 11 * Math.sin(a), isFront = Math.sin(a) > 0;
+        b.setAttribute('d', 'M' + x.toFixed(1) + ' ' + y.toFixed(1) + ' V' + (y - 30).toFixed(1) + ' Q' + x.toFixed(1) + ' 588 1250 588');
+        b.setAttribute('opacity', isFront ? '1' : '.55');
+        var parent = isFront ? front : back;
+        if (b.parentNode !== parent) parent.appendChild(b);
+      });
+    });
+    gsap.to('.carousel__ring', { strokeDashoffset: -130, duration: 2, repeat: -1, ease: 'none' });
+  }
+
+  /* Les enfants : cycle de course articulé + traversée de gauche à droite */
+  var heroTickers = [];
+  function heroKids() {
+    var boy = $('.runner--boy'), girl = $('.runner--girl'), ball = $('.ball'), hero = $('.hero');
+    if (!boy || !girl || !ball) return;
+
+    function rig(p, hip, knee, shoulder, elbow, neck) {
+      var q = function (sel, origin) {
+        var el = $('.' + p + '-' + sel);
+        if (!el) return function () {};
+        gsap.set(el, { svgOrigin: origin });
+        return gsap.quickSetter(el, 'rotation', 'deg');
+      };
+      return {
+        legF: q('legF', hip), legB: q('legB', hip), shinF: q('shinF', knee), shinB: q('shinB', knee),
+        armF: q('armF', shoulder), armB: q('armB', shoulder), foreF: q('foreF', elbow), foreB: q('foreB', elbow),
+        head: q('head', neck), body: gsap.quickSetter('.' + p + '-body', 'y', 'px')
+      };
+    }
+    // Pivots en pose de repos (coordonnées du SVG de chaque enfant)
+    var B = rig('b', '0 -66', '0 -35', '0 -106', '0 -83', '0 -112');
+    var G = rig('g', '0 -48', '0 -26', '0 -80', '0 -63', '0 -88');
+    var tailTop = $('.g-tailTop'), tailLow = $('.g-tailLow');
+    var setTailTop = tailTop ? (gsap.set(tailTop, { svgOrigin: '-12 -116' }), gsap.quickSetter(tailTop, 'rotation', 'deg')) : function () {};
+    var setTailLow = tailLow ? (gsap.set(tailLow, { svgOrigin: '-14 -105' }), gsap.quickSetter(tailLow, 'rotation', 'deg')) : function () {};
+
+    // Pose d'une foulée : phase φ en radians
+    function pose(R, phi, thighAmp, armAmp, bob) {
+      [['F', 0], ['B', Math.PI]].forEach(function (side) {
+        var ph = phi + side[1];
+        var thigh = thighAmp * Math.sin(ph);                                 // + = vers l'avant
+        var knee = 12 + 80 * Math.max(0, Math.sin(ph - Math.PI - 0.5));      // talon qui remonte
+        R['leg' + side[0]](-thigh);
+        R['shin' + side[0]](knee);
+        R['arm' + side[0]](armAmp * Math.sin(ph));                           // bras opposé à la jambe
+        R['fore' + side[0]](-(68 + 16 * Math.sin(ph)));                      // coude plié vers l'avant
+      });
+      R.head(3 * Math.sin(phi * 2));
+      R.body(-bob * Math.abs(Math.sin(phi)));
+    }
+
+    var setBoy = gsap.quickSetter(boy, 'x', 'px'), setGirl = gsap.quickSetter(girl, 'x', 'px');
+    var setBall = gsap.quickSetter(ball, 'x', 'px'), setBallY = gsap.quickSetter(ball, 'y', 'px');
+    var spin = $('.ball__spin'), setSpin = gsap.quickSetter(spin, 'rotation', 'deg');
+    gsap.set(spin, { svgOrigin: '0 0' });
+
+    var t = 0, travel = 0, CROSS = 12, PAUSE = 1.4;
+    heroTickers.push(function (dt) {
+      t += dt;
+      pose(B, t * (2 * Math.PI / 0.62), 38, 42, 4);
+      pose(G, t * (2 * Math.PI / 0.5) + 1, 34, 50, 3);
+      setTailTop(14 * Math.sin(t * 25));
+      setTailLow(-12 * Math.sin(t * 25 + 0.6));
+
+      travel += dt;
+      if (travel > CROSS + PAUSE) travel = 0;
+      var p = Math.min(1, travel / CROSS);
+      var W = hero.clientWidth, s = boy.clientWidth / 132;
+      var start = -boy.clientWidth - 260 * s, end = W + 300 * s;
+      var bx = start + (end - start) * p;
+      setBoy(bx);
+      setGirl(bx - 180 * s + Math.sin(t * 1.3) * 14 * s);
+      var ballX = bx + boy.clientWidth * 0.8 + (14 + Math.sin(t * 4.2) * 16) * s;
+      setBall(ballX);
+      setBallY(-Math.abs(Math.sin(t * 6.3)) * 9 * s);
+      setSpin((ballX / (Math.PI * ball.clientWidth)) * 360);
+    });
+  }
+
+  function startHeroTickers() {
+    var running = true;
+    ScrollTrigger.create({ trigger: '.hero', start: 'top bottom', end: 'bottom top', onToggle: function (self) { running = self.isActive; } });
+    document.addEventListener('visibilitychange', function () { running = !document.hidden; });
+    gsap.ticker.add(function (time, deltaMs) {
+      if (!running) return;
+      var dt = Math.min(deltaMs, 50) / 1000;
+      heroTickers.forEach(function (fn) { fn(dt); });
+    });
+  }
+
   function heroScroll() {
     var tl = gsap.timeline({
       scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: 0.6 }
@@ -950,6 +1057,9 @@
 
   if (page === 'home') {
     heroAmbient();
+    heroPlayground();
+    heroKids();
+    startHeroTickers();
     heroPointer();
     roles();
     proximity();
