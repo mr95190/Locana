@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>À propos — Locana</title>
+  <meta name="description" content="Pourquoi Locana existe, ses principes et son déploiement progressif, en commençant par l'Oise et les territoires limitrophes.">
+  <meta name="theme-color" content="#2D6A4F">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body data-page="a-propos">
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+
+  <header class="nav" id="nav">
+    <div class="container">
+      <div class="nav__bar">
+        <a class="brand" href="index.html" aria-label="Locana, accueil">
+          <svg class="brand__mark" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="18" fill="#FFB703"/><path d="M20 31 C12 26 12 15 20 9 C28 15 28 26 20 31 Z" fill="#2D6A4F"/><path d="M20 30 V16" stroke="#FFF8E7" stroke-width="1.6" stroke-linecap="round"/></svg>
+          <span>Locana</span>
+        </a>
+        <nav class="nav__links" aria-label="Navigation principale">
+          <a class="nav__link" href="index.html">Accueil</a>
+          <a class="nav__link" href="annuaire.html">Trouver un pro</a>
+          <a class="nav__link" href="services.html">Services</a>
+          <a class="nav__link" href="agenda.html">Vie locale</a>
+          <a class="nav__link" href="a-propos.html" aria-current="page">À propos</a>
+          <a class="nav__link" href="contact.html">Contact</a>
+        </nav>
+        <div class="nav__actions">
+          <a class="btn btn--ghost-light btn--sm" href="connexion.html">Espace membre</a>
+          <a class="btn btn--solar btn--sm magnetic" href="inscription.html">S'inscrire</a>
+          <button class="nav__burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobile-menu">
+            <span class="nav__burger-lines" aria-hidden="true"><span></span><span></span><span></span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <nav class="mobile-menu__links" aria-label="Navigation mobile">
+      <a href="index.html">Accueil <i data-lucide="arrow-up-right"></i></a>
+      <a href="annuaire.html">Trouver un pro <i data-lucide="arrow-up-right"></i></a>
+      <a href="services.html">Services <i data-lucide="arrow-up-right"></i></a>
+      <a href="agenda.html">Vie locale <i data-lucide="arrow-up-right"></i></a>
+      <a href="a-propos.html" aria-current="page">À propos <i data-lucide="arrow-up-right"></i></a>
+      <a href="contact.html">Contact <i data-lucide="arrow-up-right"></i></a>
+    </nav>
+    <div class="mobile-menu__actions">
+      <a class="btn btn--solar btn--lg" href="inscription.html">Inscrire mon association ou mon entreprise</a>
+      <a class="btn btn--ghost-light btn--lg" href="connexion.html">Espace membre</a>
+    </div>
+  </div>
+
+  <main id="contenu">
+    <!-- ============ HERO ============ -->
+    <section class="ph" aria-labelledby="ph-title">
+      <div class="ph__sky ph__sky--dusk" aria-hidden="true"></div>
+      <div class="ph__sun" aria-hidden="true"><div class="sun__rays"></div><div class="sun__halo"></div><div class="sun__ring"></div><div class="sun__core"></div></div>
+      <div class="ph__hills ph__hills--back" aria-hidden="true">
+        <svg viewBox="0 0 1440 280" preserveAspectRatio="none"><path d="M0 150 C180 100 360 140 540 110 C760 74 900 140 1100 104 C1260 76 1360 100 1440 92 V280 H0Z" fill="#B9E3CB"/><path d="M0 200 C240 150 460 196 700 168 C940 140 1140 190 1440 150 V280 H0Z" fill="#82CBA3"/></svg>
+      </div>
+    <svg class="ph__deco" viewBox="0 0 300 220" aria-hidden="true">
+      <line x1="230" y1="214" x2="230" y2="96" stroke="#FFF8E7" stroke-width="6" stroke-linecap="round"/>
+      <g class="turbine" data-origin="230 96">
+        <path d="M230 96 C222 66 225 44 230 26 C235 44 238 66 230 96 Z" fill="#FFF8E7" stroke="#2D6A4F" stroke-width="2"/>
+        <path d="M230 96 C222 66 225 44 230 26 C235 44 238 66 230 96 Z" fill="#FFF8E7" stroke="#2D6A4F" stroke-width="2" transform="rotate(120 230 96)"/>
+        <path d="M230 96 C222 66 225 44 230 26 C235 44 238 66 230 96 Z" fill="#FFF8E7" stroke="#2D6A4F" stroke-width="2" transform="rotate(240 230 96)"/>
+        <circle cx="230" cy="96" r="6" fill="#2D6A4F"/>
+      </g>
+      <path d="M40 214 A72 72 0 0 1 184 214 Z" fill="#E9F7F0" stroke="#2D6A4F" stroke-width="3"/>
+      <path d="M76 214 A36 72 0 0 1 148 214" fill="none" stroke="#2D6A4F" stroke-width="2"/>
+      <line x1="112" y1="142" x2="112" y2="214" stroke="#2D6A4F" stroke-width="2"/>
+      <circle cx="96" cy="200" r="12" fill="#52B788"/><circle cx="116" cy="196" r="15" fill="#3E9C6E"/><circle cx="138" cy="202" r="10" fill="#52B788"/>
+      <circle cx="112" cy="138" r="6" fill="#FFB703"/>
+    </svg>
+      <canvas class="ph__leaves" data-leaves="0.7" aria-hidden="true"></canvas>
+      <div class="ph__hills ph__hills--front" aria-hidden="true">
+        <svg viewBox="0 0 1440 280" preserveAspectRatio="none"><path d="M0 236 C260 200 520 244 780 222 C1040 200 1240 236 1440 214 V280 H0Z" fill="#FFF8E7"/></svg>
+      </div>
+      <div class="container">
+        <div class="ph__content">
+          <nav class="crumbs" aria-label="Fil d'Ariane" data-ph-fade><a href="index.html">Accueil</a><span aria-hidden="true">/</span><span>À propos</span></nav>
+          <h1 class="ph__title" id="ph-title">
+            <span class="line"><span class="line__inner">Rendre le local</span></span>
+            <span class="line"><span class="line__inner"><em>désirable et utile.</em></span></span>
+          </h1>
+          <p class="ph__lead" data-ph-fade>Locana est une plateforme indépendante qui aide les associations à trouver les bons professionnels près de chez elles, et les professionnels à soutenir la vie associative de leur territoire.</p>
+          <div class="ph__actions" data-ph-fade>
+            <a class="btn btn--solar btn--lg magnetic" href="#principes">Nos principes <i data-lucide="arrow-right" data-arrow></i></a>
+            <a class="btn btn--ghost btn--lg" href="#pilote">Le pilote dans l'Oise</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ MANIFESTE ============ -->
+    <section class="section manifesto" aria-labelledby="why-title">
+      <svg class="vine vine--manifesto" viewBox="0 0 220 900" preserveAspectRatio="none" aria-hidden="true">
+        <path class="vine__stem" d="M180 0 C120 120 210 220 150 340 C90 460 200 560 140 690 C100 780 160 840 150 900"/>
+        <path class="vine__leaf" d="M160 160 c-30 -10 -44 -34 -40 -60 c28 6 42 30 40 60z"/>
+        <path class="vine__leaf" d="M164 420 c30 -6 50 -28 52 -54 c-28 2 -48 24 -52 54z"/>
+        <path class="vine__leaf" d="M138 610 c-30 -12 -42 -36 -36 -62 c26 8 40 32 36 62z"/>
+        <path class="vine__leaf" d="M150 800 c28 -8 46 -32 46 -58 c-26 4 -44 28 -46 58z"/>
+      </svg>
+      <div class="container manifesto__grid">
+        <div class="manifesto__aside">
+          <span class="manifesto__num">01 — Pourquoi</span>
+          <p class="eyebrow" id="why-title">Un constat de terrain</p>
+        </div>
+        <div>
+          <p class="manifesto__text" data-split-words>
+            Partout en France, des bénévoles organisent des <span class="word--accent">ventes</span>, des kermesses et des marchés. Ils cherchent des fournisseurs au bouche-à-oreille, alors qu'à quelques <span class="word--accent">kilomètres</span>, des producteurs et des artisans ne demandent qu'à travailler avec eux. <span class="word--solar">Locana</span> veut rendre ces rencontres simples, fiables et <span class="word--accent">transparentes</span>.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ LE PROBLÈME ============ -->
+    <section class="section" style="background:var(--warm-2)" aria-labelledby="pb-title">
+      <div class="container">
+        <div class="section-head" data-reveal-group>
+          <p class="eyebrow"><span class="eyebrow__dot" aria-hidden="true"></span>02 — Le problème</p>
+          <h2 class="section-title" id="pb-title">Deux mondes voisins <em>qui se croisent peu.</em></h2>
+        </div>
+        <div class="problem">
+          <article class="pcard pcard--asso" data-reveal>
+            <div class="pcard__head"><span class="pcard__icon"><i data-lucide="users-round"></i></span><h3 class="pcard__title">Côté associations</h3></div>
+            <ul class="plist">
+              <li><span class="plist__n">01</span><span>Trouver des fournisseurs pour les ventes et les opérations de financement.</span></li>
+              <li><span class="plist__n">02</span><span>Découvrir les producteurs, artisans et commerces situés à quelques kilomètres.</span></li>
+              <li><span class="plist__n">03</span><span>Identifier ceux qui travaillent déjà avec des associations.</span></li>
+              <li><span class="plist__n">04</span><span>Comparer les offres, les conditions et les contributions reversées.</span></li>
+              <li><span class="plist__n">05</span><span>Faire connaître leurs propres événements.</span></li>
+              <li><span class="plist__n">06</span><span>Garder un suivi simple des partenaires et des sommes générées.</span></li>
+            </ul>
+          </article>
+          <article class="pcard pcard--pro" data-reveal>
+            <div class="pcard__head"><span class="pcard__icon"><i data-lucide="store"></i></span><h3 class="pcard__title">Côté professionnels</h3></div>
+            <ul class="plist">
+              <li><span class="plist__n">01</span><span>Toucher les associations locales et leurs familles.</span></li>
+              <li><span class="plist__n">02</span><span>Faire connaître leurs offres dans un cadre adapté, sans publicité intrusive.</span></li>
+              <li><span class="plist__n">03</span><span>Suivre simplement les ventes réalisées avec une association.</span></li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PRINCIPES ============ -->
+    <section class="section" id="principes" aria-labelledby="pr-title">
+      <div class="container">
+        <div class="section-head" data-reveal-group>
+          <p class="eyebrow"><span class="eyebrow__dot" aria-hidden="true"></span>03 — Principes directeurs</p>
+          <h2 class="section-title" id="pr-title">Six engagements <em>qui guident chaque écran.</em></h2>
+        </div>
+        <div class="principles" data-stagger>
+          <article class="principle"><span class="principle__icon"><i data-lucide="compass"></i></span><h3 class="principle__title">La proximité avant les frontières</h3><p>Une recherche doit pouvoir traverser les limites départementales et régionales. Seule compte la distance réelle.</p></article>
+          <article class="principle"><span class="principle__icon"><i data-lucide="sprout"></i></span><h3 class="principle__title">La simplicité</h3><p>Des parcours compréhensibles par des bénévoles et des professionnels peu habitués au numérique.</p></article>
+          <article class="principle"><span class="principle__icon"><i data-lucide="shield-check"></i></span><h3 class="principle__title">La confiance</h3><p>Les profils sont soumis à validation avant publication.</p></article>
+          <article class="principle"><span class="principle__icon"><i data-lucide="scale"></i></span><h3 class="principle__title">La transparence</h3><p>Réductions, contributions, dates de validité et opérations sont clairement affichées. Chaque montant s'explique.</p></article>
+          <article class="principle"><span class="principle__icon"><i data-lucide="landmark"></i></span><h3 class="principle__title">La neutralité</h3><p>La plateforme est indépendante de toute association particulière.</p></article>
+          <article class="principle"><span class="principle__icon"><i data-lucide="eye-off"></i></span><h3 class="principle__title">Pas de réseau social</h3><p>Pas de fil public, pas de commentaires ouverts, pas de discussions publiques. Un outil pratique, organisé et fiable.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CE QUE LOCANA N'EST PAS ============ -->
+    <section class="section nots" aria-labelledby="not-title">
+      <div class="container nots__grid">
+        <div class="section-head" data-reveal-group style="margin-bottom:0">
+          <p class="eyebrow">04 — Nos limites assumées</p>
+          <h2 class="section-title" id="not-title">Ce que Locana <em>ne fera pas.</em></h2>
+          <p class="section-lead" style="color:rgba(255,248,231,.75)">Dire ce que l'on ne fait pas, c'est aussi une façon d'être transparent.</p>
+        </div>
+        <ul class="nots__list" data-stagger>
+          <li><span class="nots__x"><i data-lucide="ban"></i></span><div><div class="nots__t">Publier un profil sans contrôle</div><div class="nots__d">Une recommandation ne vaut ni vérification ni partenariat.</div></div></li>
+          <li><span class="nots__x"><i data-lucide="ban"></i></span><div><div class="nots__t">Devenir un réseau social</div><div class="nots__d">Aucun fil d'actualité, aucun commentaire public, aucune course à l'engagement.</div></div></li>
+          <li><span class="nots__x"><i data-lucide="ban"></i></span><div><div class="nots__t">Encaisser des fonds pour le compte de tiers</div><div class="nots__d">Pas sans avoir étudié les obligations applicables et choisi un prestataire de paiement adapté.</div></div></li>
+          <li><span class="nots__x"><i data-lucide="ban"></i></span><div><div class="nots__t">Mélanger les montants</div><div class="nots__d">Réduction famille, contribution association et rémunération de la plateforme restent séparées.</div></div></li>
+          <li><span class="nots__x"><i data-lucide="ban"></i></span><div><div class="nots__t">Exposer des données inutiles</div><div class="nots__d">Les données personnelles non nécessaires ne sont jamais rendues publiques.</div></div></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ DÉPLOIEMENT ============ -->
+    <section class="section" aria-labelledby="ph-steps-title">
+      <div class="container">
+        <div class="section-head" data-reveal-group style="text-align:center;justify-items:center">
+          <p class="eyebrow"><span class="eyebrow__dot" aria-hidden="true"></span>05 — Déploiement progressif</p>
+          <h2 class="section-title" id="ph-steps-title">Sept étapes, <em>une à la fois.</em></h2>
+          <p class="section-lead">Le site que vous parcourez est le prototype visuel : il sert à tester les parcours avant le développement.</p>
+        </div>
+        <div class="phases" data-progress>
+          <span class="phases__line" aria-hidden="true"><span class="phases__fill" data-progress-fill></span></span>
+          <div class="phase phase--done" data-reveal><span class="phase__n">01</span><div class="phase__card"><div class="phase__top"><h3 class="phase__title">Cadrage</h3><span class="badge badge--verified"><i data-lucide="check"></i>Réalisé</span></div><ul class="phase__tags"><li>Parcours utilisateurs</li><li>Périmètre du MVP</li><li>Règles de validation</li></ul></div></div>
+          <div class="phase phase--current" data-reveal><span class="phase__n">02</span><div class="phase__card"><div class="phase__top"><h3 class="phase__title">Prototype visuel</h3><span class="badge badge--partner"><i data-lucide="sparkles"></i>En cours</span></div><ul class="phase__tags"><li>Pages principales</li><li>Mobile et ordinateur</li><li>Tests avec bénévoles et pros</li></ul></div></div>
+          <div class="phase" data-reveal><span class="phase__n">03</span><div class="phase__card"><div class="phase__top"><h3 class="phase__title">Développement du socle</h3></div><ul class="phase__tags"><li>Base de données</li><li>Authentification</li><li>Rôles et permissions</li><li>Recherche géographique</li></ul></div></div>
+          <div class="phase" data-reveal><span class="phase__n">04</span><div class="phase__card"><div class="phase__top"><h3 class="phase__title">Partenariats</h3></div><ul class="phase__tags"><li>Offres</li><li>Codes association</li><li>Invitations</li><li>Déclaration des ventes</li></ul></div></div>
+          <div class="phase" data-reveal><span class="phase__n">05</span><div class="phase__card"><div class="phase__top"><h3 class="phase__title">Agenda local</h3></div><ul class="phase__tags"><li>Création d'événements</li><li>Validation</li><li>Filtres lieu et date</li></ul></div></div>
+          <div class="phase" data-reveal><span class="phase__n">06</span><div class="phase__card"><div class="phase__top"><h3 class="phase__title">Pilote</h3></div><ul class="phase__tags"><li>Oise et communes limitrophes</li><li>Volontaires</li><li>Retours d'usage</li></ul></div></div>
+          <div class="phase" data-reveal><span class="phase__n">07</span><div class="phase__card"><div class="phase__top"><h3 class="phase__title">Amélioration et extension</h3></div><ul class="phase__tags"><li>Corrections</li><li>Nouveaux territoires</li></ul></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PILOTE ============ -->
+    <section class="section" id="pilote" style="background:var(--moss-soft)" aria-labelledby="pilot-title">
+      <div class="container pilot">
+        <div class="territory" data-reveal role="img" aria-label="Schéma : l'Oise au centre, entourée de la Somme, de l'Aisne, de la Seine-et-Marne, du Val-d'Oise, de l'Eure et de la Seine-Maritime.">
+          <svg viewBox="0 0 500 500" aria-hidden="true">
+            <circle class="territory__ring" cx="250" cy="250" r="230"/>
+            <circle class="territory__ring" cx="250" cy="250" r="160"/>
+            <path class="territory__core" d="M250 150 C310 150 350 190 350 250 C350 310 310 350 250 350 C190 350 150 310 150 250 C150 190 190 150 250 150Z" data-blob/>
+            <text class="territory__label" x="250" y="246" text-anchor="middle">Oise</text>
+            <text x="250" y="270" text-anchor="middle" style="font:600 12px var(--mono);fill:#FFB703">PILOTE</text>
+            <g data-depts>
+              <g><circle class="territory__dot" cx="250" cy="72" r="6"/><text class="territory__dept" x="250" y="56" text-anchor="middle">Somme</text></g>
+              <g><circle class="territory__dot" cx="415" cy="170" r="6"/><text class="territory__dept" x="428" y="150" text-anchor="middle">Aisne</text></g>
+              <g><circle class="territory__dot" cx="400" cy="360" r="6"/><text class="territory__dept" x="410" y="390" text-anchor="middle">Seine-et-Marne</text></g>
+              <g><circle class="territory__dot" cx="250" cy="428" r="6"/><text class="territory__dept" x="250" y="456" text-anchor="middle">Val-d'Oise</text></g>
+              <g><circle class="territory__dot" cx="88" cy="330" r="6"/><text class="territory__dept" x="80" y="360" text-anchor="middle">Eure</text></g>
+              <g><circle class="territory__dot" cx="95" cy="150" r="6"/><text class="territory__dept" x="90" y="130" text-anchor="middle">Seine-Maritime</text></g>
+            </g>
+          </svg>
+        </div>
+        <div style="display:grid;gap:1.5rem">
+          <div class="section-head" data-reveal-group style="margin-bottom:0">
+            <p class="eyebrow"><span class="eyebrow__dot" aria-hidden="true"></span>06 — Territoire pilote</p>
+            <h2 class="section-title" id="pilot-title">On commence dans l'Oise, <em>sans s'y enfermer.</em></h2>
+            <p class="section-lead">Le pilote réunit un petit groupe d'associations et de professionnels volontaires dans l'Oise et les communes limitrophes. L'architecture, elle, est pensée dès le départ pour un déploiement national.</p>
+          </div>
+          <div data-reveal>
+            <p class="eyebrow" style="margin-bottom:12px">Ce que le pilote mesurera</p>
+            <ul class="metrics">
+              <li><i data-lucide="users-round"></i>Associations validées</li>
+              <li><i data-lucide="store"></i>Professionnels validés</li>
+              <li><i data-lucide="message-square-quote"></i>Recommandations</li>
+              <li><i data-lucide="ticket-percent"></i>Offres actives</li>
+              <li><i data-lucide="search"></i>Recherches</li>
+              <li><i data-lucide="handshake"></i>Mises en relation</li>
+              <li><i data-lucide="receipt"></i>Transactions déclarées</li>
+              <li><i data-lucide="hand-coins"></i>Contributions générées</li>
+              <li><i data-lucide="calendar-heart"></i>Événements publiés</li>
+            </ul>
+          </div>
+          <p class="callout callout--light" data-reveal><i data-lucide="info"></i><span>L'objectif n'est pas de maximiser les inscriptions, mais de vérifier que chacun trouve réellement des partenaires utiles et que le suivi des contributions fonctionne.</span></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA ============ -->
+    <section class="cta" aria-labelledby="cta-title">
+      <div class="container">
+        <div class="cta__panel">
+          <div class="cta__sun" aria-hidden="true"></div>
+          <svg class="cta__hills" viewBox="0 0 1200 300" preserveAspectRatio="none" aria-hidden="true"><path d="M0 200 C200 150 400 210 600 170 S1000 140 1200 170 V300 H0Z" fill="#82CBA3"/><path d="M0 250 C240 210 480 260 720 230 S1080 210 1200 230 V300 H0Z" fill="#2D6A4F"/></svg>
+          <div class="cta__copy" data-reveal-group>
+            <p class="eyebrow"><span class="eyebrow__dot" aria-hidden="true"></span>Participer</p>
+            <h2 class="section-title" id="cta-title">Votre territoire <em>vous attend.</em></h2>
+            <p class="section-lead">Association, professionnel, mairie ou comité des fêtes&nbsp;: dites-nous comment vous aimeriez participer au pilote.</p>
+          </div>
+          <div class="cta__cards">
+            <a class="cta-card glass" href="contact.html" data-reveal><span class="cta-card__icon"><i data-lucide="mail"></i></span><span><span class="cta-card__title">Écrire à l'équipe</span><br><span class="cta-card__text">Une question, une idée, une commune volontaire</span></span><span class="cta-card__arrow"><i data-lucide="arrow-right"></i></span></a>
+            <a class="cta-card glass" href="services.html" data-reveal><span class="cta-card__icon"><i data-lucide="layout-dashboard"></i></span><span><span class="cta-card__title">Découvrir les services</span><br><span class="cta-card__text">Espaces, offres, code partenaire</span></span><span class="cta-card__arrow"><i data-lucide="arrow-right"></i></span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__about">
+          <a class="brand" href="index.html" aria-label="Locana, accueil">
+            <svg class="brand__mark" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="18" fill="#FFB703"/><path d="M20 31 C12 26 12 15 20 9 C28 15 28 26 20 31 Z" fill="#2D6A4F"/><path d="M20 30 V16" stroke="#FFF8E7" stroke-width="1.6" stroke-linecap="round"/></svg>
+            <span>Locana</span>
+          </a>
+          <p>La plateforme indépendante qui relie associations, commerces et producteurs de proximité. Nom de travail — pilote dans l'Oise et les territoires limitrophes.</p>
+        </div>
+        <div>
+          <p class="footer__title">Plateforme</p>
+          <ul class="footer__links">
+            <li><a href="annuaire.html">Trouver un pro</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="agenda.html">Vie locale</a></li>
+            <li><a href="a-propos.html">À propos</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__title">Espaces</p>
+          <ul class="footer__links">
+            <li><a href="inscription.html?profil=association">Association</a></li>
+            <li><a href="inscription.html?profil=professionnel">Professionnel</a></li>
+            <li><a href="connexion.html">Se connecter</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__title">Informations</p>
+          <ul class="footer__links">
+            <li><a href="#">Conditions d'utilisation <span class="pill-soon">bientôt</span></a></li>
+            <li><a href="#">Confidentialité &amp; RGPD <span class="pill-soon">bientôt</span></a></li>
+            <li><a href="#">Règles de référencement <span class="pill-soon">bientôt</span></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© 2026 Locana — prototype</span>
+        <span>Sans fil public, sans commentaires, sans publicité intrusive.</span>
+      </div>
+      <div class="footer__word" aria-hidden="true">Locana</div>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"><i data-lucide="info"></i><span class="toast__text"></span></div>
+  <div class="page-veil" aria-hidden="true"></div>
+
+  <script src="assets/vendor/gsap.min.js"></script>
+  <script src="assets/vendor/ScrollTrigger.min.js"></script>
+  <script src="assets/vendor/lenis.min.js"></script>
+  <script src="assets/js/icons.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

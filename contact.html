@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact — Locana</title>
+  <meta name="description" content="Rejoindre le pilote, recommander un professionnel ou poser une question à l'équipe Locana.">
+  <meta name="theme-color" content="#2D6A4F">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body data-page="contact">
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+
+  <header class="nav" id="nav">
+    <div class="container">
+      <div class="nav__bar">
+        <a class="brand" href="index.html" aria-label="Locana, accueil">
+          <svg class="brand__mark" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="18" fill="#FFB703"/><path d="M20 31 C12 26 12 15 20 9 C28 15 28 26 20 31 Z" fill="#2D6A4F"/><path d="M20 30 V16" stroke="#FFF8E7" stroke-width="1.6" stroke-linecap="round"/></svg>
+          <span>Locana</span>
+        </a>
+        <nav class="nav__links" aria-label="Navigation principale">
+          <a class="nav__link" href="index.html">Accueil</a>
+          <a class="nav__link" href="annuaire.html">Trouver un pro</a>
+          <a class="nav__link" href="services.html">Services</a>
+          <a class="nav__link" href="agenda.html">Vie locale</a>
+          <a class="nav__link" href="a-propos.html">À propos</a>
+          <a class="nav__link" href="contact.html" aria-current="page">Contact</a>
+        </nav>
+        <div class="nav__actions">
+          <a class="btn btn--ghost-light btn--sm" href="connexion.html">Espace membre</a>
+          <a class="btn btn--solar btn--sm magnetic" href="inscription.html">S'inscrire</a>
+          <button class="nav__burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobile-menu">
+            <span class="nav__burger-lines" aria-hidden="true"><span></span><span></span><span></span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <nav class="mobile-menu__links" aria-label="Navigation mobile">
+      <a href="index.html">Accueil <i data-lucide="arrow-up-right"></i></a>
+      <a href="annuaire.html">Trouver un pro <i data-lucide="arrow-up-right"></i></a>
+      <a href="services.html">Services <i data-lucide="arrow-up-right"></i></a>
+      <a href="agenda.html">Vie locale <i data-lucide="arrow-up-right"></i></a>
+      <a href="a-propos.html">À propos <i data-lucide="arrow-up-right"></i></a>
+      <a href="contact.html" aria-current="page">Contact <i data-lucide="arrow-up-right"></i></a>
+    </nav>
+    <div class="mobile-menu__actions">
+      <a class="btn btn--solar btn--lg" href="inscription.html">Inscrire mon association ou mon entreprise</a>
+      <a class="btn btn--ghost-light btn--lg" href="connexion.html">Espace membre</a>
+    </div>
+  </div>
+
+  <main id="contenu">
+    <!-- ============ HERO ============ -->
+    <section class="ph ph--compact" aria-labelledby="ph-title">
+      <div class="ph__sky " aria-hidden="true"></div>
+      <div class="ph__sun" aria-hidden="true"><div class="sun__rays"></div><div class="sun__halo"></div><div class="sun__ring"></div><div class="sun__core"></div></div>
+      <div class="ph__hills ph__hills--back" aria-hidden="true">
+        <svg viewBox="0 0 1440 280" preserveAspectRatio="none"><path d="M0 150 C180 100 360 140 540 110 C760 74 900 140 1100 104 C1260 76 1360 100 1440 92 V280 H0Z" fill="#B9E3CB"/><path d="M0 200 C240 150 460 196 700 168 C940 140 1140 190 1440 150 V280 H0Z" fill="#82CBA3"/></svg>
+      </div>
+      <canvas class="ph__leaves" data-leaves="0.7" aria-hidden="true"></canvas>
+      <div class="ph__hills ph__hills--front" aria-hidden="true">
+        <svg viewBox="0 0 1440 280" preserveAspectRatio="none"><path d="M0 236 C260 200 520 244 780 222 C1040 200 1240 236 1440 214 V280 H0Z" fill="#FFF8E7"/></svg>
+      </div>
+      <div class="container">
+        <div class="ph__content">
+          <nav class="crumbs" aria-label="Fil d'Ariane" data-ph-fade><a href="index.html">Accueil</a><span aria-hidden="true">/</span><span>Contact</span></nav>
+          <h1 class="ph__title" id="ph-title">
+            <span class="line"><span class="line__inner">Parlons de votre</span></span>
+            <span class="line"><span class="line__inner"><em>projet local.</em></span></span>
+          </h1>
+          <p class="ph__lead" data-ph-fade>Rejoindre le pilote, recommander un professionnel, proposer votre commune ou simplement poser une question&nbsp;: choisissez votre profil, on s'occupe du reste.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FORMULAIRE ============ -->
+    <section class="section" style="padding-top:clamp(2rem,4vw,3rem)" aria-label="Formulaire de contact">
+      <div class="container contact">
+        <aside class="contact__aside">
+          <div data-reveal-group style="display:grid;gap:12px">
+            <p class="eyebrow"><span class="eyebrow__dot" aria-hidden="true"></span>Vous êtes…</p>
+            <div class="routes" role="group" aria-label="Choisir votre profil">
+              <button class="route" type="button" data-route="association" aria-pressed="true"><span class="route__icon"><i data-lucide="users-round"></i></span><span><span class="route__t">Une association</span><span class="route__d">Parents d'élèves, club, comité…</span></span><span class="route__check"><i data-lucide="check"></i></span></button>
+              <button class="route" type="button" data-route="professionnel" aria-pressed="false"><span class="route__icon"><i data-lucide="store"></i></span><span><span class="route__t">Un professionnel</span><span class="route__d">Commerçant, artisan, producteur…</span></span><span class="route__check"><i data-lucide="check"></i></span></button>
+              <button class="route" type="button" data-route="collectivite" aria-pressed="false"><span class="route__icon"><i data-lucide="building-2"></i></span><span><span class="route__t">Une mairie ou un organisateur</span><span class="route__d">Comité des fêtes, office de tourisme…</span></span><span class="route__check"><i data-lucide="check"></i></span></button>
+              <button class="route" type="button" data-route="autre" aria-pressed="false"><span class="route__icon"><i data-lucide="message-square-text"></i></span><span><span class="route__t">Autre demande</span><span class="route__d">Presse, partenariat, curiosité…</span></span><span class="route__check"><i data-lucide="check"></i></span></button>
+            </div>
+          </div>
+          <div class="infos" data-reveal>
+            <div class="infos__row"><span class="infos__icon"><i data-lucide="map-pin"></i></span><div><div class="infos__t">Territoire pilote</div><div class="infos__d">Oise et communes limitrophes</div></div></div>
+            <div class="infos__row"><span class="infos__icon"><i data-lucide="mail"></i></span><div><div class="infos__t">Adresse de contact</div><div class="infos__d">Communiquée à l'ouverture du pilote</div></div></div>
+            <div class="infos__row"><span class="infos__icon"><i data-lucide="lock"></i></span><div><div class="infos__t">Vos données</div><div class="infos__d">Utilisées uniquement pour répondre à votre demande</div></div></div>
+          </div>
+        </aside>
+
+        <div class="form-card" id="form-card" data-reveal>
+          <form class="form" id="contact-form" novalidate>
+            <div class="form__head">
+              <h2 class="form__title" id="form-title">Votre message</h2>
+              <p class="form__req">Tous les champs sont obligatoires, sauf mention « facultatif ».</p>
+            </div>
+            <input type="hidden" name="profil" value="association">
+
+            <label class="field">
+              <span class="field__label">Nom et prénom</span>
+              <input class="field__input" type="text" name="nom" autocomplete="name" required>
+              <span class="field__error"><i data-lucide="info"></i>Indiquez votre nom.</span>
+            </label>
+            <label class="field">
+              <span class="field__label">Adresse e-mail</span>
+              <input class="field__input" type="email" name="email" autocomplete="email" inputmode="email" required>
+              <span class="field__error"><i data-lucide="info"></i>Indiquez une adresse e-mail valide, par exemple nom@domaine.fr.</span>
+            </label>
+            <label class="field">
+              <span class="field__label" data-structure-label>Nom de l'association</span>
+              <input class="field__input" type="text" name="structure" autocomplete="organization" required>
+              <span class="field__error"><i data-lucide="info"></i>Indiquez le nom de votre structure.</span>
+            </label>
+            <label class="field">
+              <span class="field__label">Commune ou code postal</span>
+              <input class="field__input" type="text" name="commune" autocomplete="address-level2" required>
+              <span class="field__error"><i data-lucide="info"></i>Indiquez votre commune.</span>
+            </label>
+            <label class="field full">
+              <span class="field__label">Objet de votre demande</span>
+              <select class="field__input" name="objet" required>
+                <option value="">Choisir…</option>
+                <option>Rejoindre le pilote</option>
+                <option>Recommander un professionnel</option>
+                <option>Proposer un événement</option>
+                <option>Question sur le fonctionnement</option>
+                <option>Signaler un problème</option>
+                <option>Autre</option>
+              </select>
+              <span class="field__error"><i data-lucide="info"></i>Choisissez l'objet de votre demande.</span>
+            </label>
+            <label class="field full">
+              <span class="field__label">Message</span>
+              <textarea class="field__input field__input--area" name="message" maxlength="1500" required placeholder="Présentez votre besoin en quelques lignes."></textarea>
+              <span class="field__error"><i data-lucide="info"></i>Votre message doit contenir au moins 20 caractères.</span>
+              <span class="counter" aria-live="polite"><span data-counter>0</span> / 1500</span>
+            </label>
+            <label class="field">
+              <span class="field__label">Téléphone <span class="opt">(facultatif)</span></span>
+              <input class="field__input" type="tel" name="tel" autocomplete="tel" inputmode="tel">
+              <span class="field__hint">Si vous préférez être rappelé.</span>
+            </label>
+            <div class="field full">
+              <label class="check"><input type="checkbox" name="rgpd" required><span>J'accepte que mes informations soient utilisées pour traiter ma demande. Elles ne seront ni publiées ni transmises à des tiers.</span></label>
+              <span class="field__error"><i data-lucide="info"></i>Votre accord est nécessaire pour traiter la demande.</span>
+            </div>
+            <div class="form__foot">
+              <p class="form__note">Prototype : le formulaire vérifie votre saisie mais n'envoie encore aucun message.</p>
+              <button class="btn btn--lg magnetic" type="submit">Envoyer <i data-lucide="send" data-arrow></i></button>
+            </div>
+          </form>
+
+          <div class="form-success" role="status" aria-live="polite" tabindex="-1">
+            <svg class="success__icon" viewBox="0 0 96 96" aria-hidden="true">
+              <circle cx="48" cy="48" r="44" fill="#DDF1E5"/>
+              <circle class="success__ring" cx="48" cy="48" r="44" fill="none" stroke="#52B788" stroke-width="3"/>
+              <path class="success__check" d="M30 49 l12 12 l24 -26" fill="none" stroke="#2D6A4F" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <h2 class="form__title">Merci, votre message est prêt.</h2>
+            <p style="color:var(--ink-soft);max-width:44ch">Dans cette version de démonstration, il n'a pas été envoyé. Le formulaire sera relié à la messagerie de l'équipe à l'ouverture du pilote.</p>
+            <button class="btn btn--ghost" type="button" data-reset-form><i data-lucide="rotate-ccw"></i>Écrire un autre message</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="section" style="background:var(--moss-soft)" aria-labelledby="faq-title">
+      <div class="container faq-layout">
+        <div class="section-head" data-reveal-group>
+          <p class="eyebrow"><span class="eyebrow__dot" aria-hidden="true"></span>Avant d'écrire</p>
+          <h2 class="section-title" id="faq-title">Réponses <em>rapides.</em></h2>
+        </div>
+        <div class="faq" data-stagger>
+          <details><summary>Ma commune n'est pas dans l'Oise, puis-je participer&nbsp;?<span class="faq__plus"><i data-lucide="plus"></i></span></summary><div class="faq__body"><p>Oui, si elle est proche : le pilote couvre l'Oise et les communes limitrophes, quel que soit leur département. Pour les autres territoires, écrivez-nous : nous notons chaque demande pour l'extension.</p></div></details>
+          <details><summary>Quels justificatifs seront demandés&nbsp;?<span class="faq__plus"><i data-lucide="plus"></i></span></summary><div class="faq__body"><p>La liste exacte est en cours de définition. Elle sera indiquée clairement au moment de l'inscription, pour les associations comme pour les professionnels.</p></div></details>
+          <details><summary>Je connais un professionnel parfait, comment le proposer&nbsp;?<span class="faq__plus"><i data-lucide="plus"></i></span></summary><div class="faq__body"><p>Choisissez l'objet « Recommander un professionnel » et indiquez son nom, sa catégorie et sa commune. Une fois votre association inscrite, vous pourrez aussi l'inviter directement depuis votre espace.</p></div></details>
+          <details><summary>Une mairie peut-elle publier des événements&nbsp;?<span class="faq__plus"><i data-lucide="plus"></i></span></summary><div class="faq__body"><p>Dans un premier temps, l'agenda est ouvert aux associations et aux professionnels. L'ouverture aux mairies, comités des fêtes et clubs est envisagée : votre demande nous aide à la préparer.</p></div></details>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__about">
+          <a class="brand" href="index.html" aria-label="Locana, accueil">
+            <svg class="brand__mark" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="18" fill="#FFB703"/><path d="M20 31 C12 26 12 15 20 9 C28 15 28 26 20 31 Z" fill="#2D6A4F"/><path d="M20 30 V16" stroke="#FFF8E7" stroke-width="1.6" stroke-linecap="round"/></svg>
+            <span>Locana</span>
+          </a>
+          <p>La plateforme indépendante qui relie associations, commerces et producteurs de proximité. Nom de travail — pilote dans l'Oise et les territoires limitrophes.</p>
+        </div>
+        <div>
+          <p class="footer__title">Plateforme</p>
+          <ul class="footer__links">
+            <li><a href="annuaire.html">Trouver un pro</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="agenda.html">Vie locale</a></li>
+            <li><a href="a-propos.html">À propos</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__title">Espaces</p>
+          <ul class="footer__links">
+            <li><a href="inscription.html?profil=association">Association</a></li>
+            <li><a href="inscription.html?profil=professionnel">Professionnel</a></li>
+            <li><a href="connexion.html">Se connecter</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__title">Informations</p>
+          <ul class="footer__links">
+            <li><a href="#">Conditions d'utilisation <span class="pill-soon">bientôt</span></a></li>
+            <li><a href="#">Confidentialité &amp; RGPD <span class="pill-soon">bientôt</span></a></li>
+            <li><a href="#">Règles de référencement <span class="pill-soon">bientôt</span></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© 2026 Locana — prototype</span>
+        <span>Sans fil public, sans commentaires, sans publicité intrusive.</span>
+      </div>
+      <div class="footer__word" aria-hidden="true">Locana</div>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"><i data-lucide="info"></i><span class="toast__text"></span></div>
+  <div class="page-veil" aria-hidden="true"></div>
+
+  <script src="assets/vendor/gsap.min.js"></script>
+  <script src="assets/vendor/ScrollTrigger.min.js"></script>
+  <script src="assets/vendor/lenis.min.js"></script>
+  <script src="assets/js/icons.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/contact.js"></script>
+</body>
+</html>
