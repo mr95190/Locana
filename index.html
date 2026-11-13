@@ -1,0 +1,983 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Locana — Les bons pros, tout près de votre association</title>
+  <meta name="description" content="Locana relie associations, commerçants, artisans et producteurs autour d'une même commune : annuaire géolocalisé, offres partenaires transparentes et agenda de la vie locale.">
+  <meta name="theme-color" content="#2D6A4F">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+
+  <!-- Intro -->
+  <div class="intro" aria-hidden="true">
+    <div class="intro__inner">
+      <svg class="intro__sun" viewBox="0 0 100 100">
+        <g class="intro__rays" stroke="#FFB703" stroke-width="4" stroke-linecap="round">
+          <line x1="50" y1="4" x2="50" y2="16"/><line x1="50" y1="84" x2="50" y2="96"/>
+          <line x1="4" y1="50" x2="16" y2="50"/><line x1="84" y1="50" x2="96" y2="50"/>
+          <line x1="17.5" y1="17.5" x2="26" y2="26"/><line x1="74" y1="74" x2="82.5" y2="82.5"/>
+          <line x1="17.5" y1="82.5" x2="26" y2="74"/><line x1="74" y1="26" x2="82.5" y2="17.5"/>
+        </g>
+        <circle class="intro__core" cx="50" cy="50" r="24" fill="#FFB703"/>
+        <path class="intro__leaf" d="M50 66 C38 58 38 42 50 32 C62 42 62 58 50 66 Z" fill="#2D6A4F"/>
+      </svg>
+      <div class="intro__word"><span>L</span><span>o</span><span>c</span><span>a</span><span>n</span><span>a</span></div>
+      <div class="intro__tag">Associations &amp; commerces locaux</div>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <header class="nav" id="nav">
+    <div class="container">
+      <div class="nav__bar">
+        <a class="brand" href="index.html" aria-label="Locana, accueil">
+          <svg class="brand__mark" viewBox="0 0 40 40" aria-hidden="true">
+            <circle cx="20" cy="20" r="18" fill="#FFB703"/>
+            <path d="M20 31 C12 26 12 15 20 9 C28 15 28 26 20 31 Z" fill="#2D6A4F"/>
+            <path d="M20 30 V16" stroke="#FFF8E7" stroke-width="1.6" stroke-linecap="round"/>
+          </svg>
+          <span>Locana</span>
+        </a>
+        <nav class="nav__links" aria-label="Navigation principale">
+          <a class="nav__link" href="index.html" aria-current="page">Accueil</a>
+          <a class="nav__link" href="annuaire.html">Trouver un pro</a>
+          <a class="nav__link" href="services.html">Services</a>
+          <a class="nav__link" href="agenda.html">Vie locale</a>
+          <a class="nav__link" href="a-propos.html">À propos</a>
+          <a class="nav__link" href="contact.html">Contact</a>
+        </nav>
+        <div class="nav__actions">
+          <a class="btn btn--ghost-light btn--sm" href="connexion.html">Espace membre</a>
+          <a class="btn btn--solar btn--sm magnetic" href="inscription.html">S'inscrire</a>
+          <button class="nav__burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobile-menu">
+            <span class="nav__burger-lines" aria-hidden="true"><span></span><span></span><span></span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <nav class="mobile-menu__links" aria-label="Navigation mobile">
+      <a href="index.html" aria-current="page">Accueil <i data-lucide="arrow-up-right"></i></a>
+      <a href="annuaire.html">Trouver un pro <i data-lucide="arrow-up-right"></i></a>
+      <a href="services.html">Services <i data-lucide="arrow-up-right"></i></a>
+      <a href="agenda.html">Vie locale <i data-lucide="arrow-up-right"></i></a>
+      <a href="a-propos.html">À propos <i data-lucide="arrow-up-right"></i></a>
+      <a href="contact.html">Contact <i data-lucide="arrow-up-right"></i></a>
+    </nav>
+    <div class="mobile-menu__actions">
+      <a class="btn btn--solar btn--lg" href="inscription.html">Inscrire mon association ou mon entreprise</a>
+      <a class="btn btn--ghost-light btn--lg" href="connexion.html">Espace membre</a>
+    </div>
+  </div>
+
+  <main id="contenu">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero__sky" aria-hidden="true"></div>
+      <div class="hero__sky-warm" aria-hidden="true"></div>
+
+      <div class="hero__sun" aria-hidden="true">
+        <div class="sun__rays"></div>
+        <div class="sun__halo"></div>
+        <div class="sun__ring"></div>
+        <div class="sun__core"></div>
+      </div>
+
+      <!-- Collines lointaines -->
+      <div class="hero__layer hero__layer--far" aria-hidden="true">
+        <svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMax slice">
+          <path d="M0 640 C160 590 300 612 460 578 C640 540 780 602 960 566 C1120 536 1280 572 1440 548 V900 H0Z" fill="#B9E3CB"/>
+          <g fill="#A3D7B9">
+            <path d="M560 572 A34 34 0 0 1 628 572 Z"/>
+            <rect x="640" y="520" width="18" height="56" rx="9"/>
+            <rect x="664" y="540" width="14" height="38" rx="7"/>
+            <path d="M380 590 A26 26 0 0 1 432 590 Z"/>
+            <rect x="1220" y="500" width="16" height="64" rx="8"/>
+            <path d="M1250 562 A30 30 0 0 1 1310 562 Z"/>
+          </g>
+          <g stroke="#A3D7B9" stroke-width="3" stroke-linecap="round">
+            <line x1="500" y1="586" x2="500" y2="520"/>
+            <line x1="1380" y1="552" x2="1380" y2="490"/>
+          </g>
+        </svg>
+      </div>
+
+      <!-- Ville solaire (plan intermédiaire) -->
+      <div class="hero__layer hero__layer--mid" aria-hidden="true">
+        <svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMax slice">
+          <defs>
+            <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#E9F7F0" stop-opacity=".95"/>
+              <stop offset="1" stop-color="#C5EBDA" stop-opacity=".9"/>
+            </linearGradient>
+            <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#5CC3DB"/>
+              <stop offset="1" stop-color="#219EBC"/>
+            </linearGradient>
+          </defs>
+          <path d="M0 724 C220 664 420 704 640 674 C860 644 1040 694 1240 654 C1340 634 1400 644 1440 640 V900 H0Z" fill="#82CBA3"/>
+
+          <!-- Arche Art nouveau -->
+          <path d="M752 684 V606 Q802 538 852 606 V684 Z" fill="#FFF8E7" stroke="#2D6A4F" stroke-width="3"/>
+          <path d="M778 684 V624 Q802 590 826 624 V684" fill="#FFE3A0" stroke="#2D6A4F" stroke-width="2"/>
+          <circle cx="802" cy="584" r="6" fill="#FFB703"/>
+          <path d="M752 640 C736 630 734 612 744 600" stroke="#52B788" stroke-width="3" fill="none" stroke-linecap="round"/>
+          <circle cx="744" cy="600" r="7" fill="#52B788"/><circle cx="738" cy="622" r="6" fill="#52B788"/>
+
+          <!-- Petite éolienne -->
+          <line x1="890" y1="680" x2="890" y2="548" stroke="#FFF8E7" stroke-width="5" stroke-linecap="round"/>
+          <g class="turbine turbine--small" data-origin="890 548">
+            <path d="M890 548 C884 520 886 500 890 486 C894 500 896 520 890 548 Z" fill="#FFF8E7" stroke="#2D6A4F" stroke-width="1.5"/>
+            <path d="M890 548 C884 520 886 500 890 486 C894 500 896 520 890 548 Z" fill="#FFF8E7" stroke="#2D6A4F" stroke-width="1.5" transform="rotate(120 890 548)"/>
+            <path d="M890 548 C884 520 886 500 890 486 C894 500 896 520 890 548 Z" fill="#FFF8E7" stroke="#2D6A4F" stroke-width="1.5" transform="rotate(240 890 548)"/>
+            <circle cx="890" cy="548" r="5" fill="#2D6A4F"/>
+          </g>
+
+          <!-- Serre-dôme -->
+          <path d="M912 672 A96 96 0 0 1 1104 672 Z" fill="url(#glass)" stroke="#2D6A4F" stroke-width="3"/>
+          <path d="M960 672 A48 96 0 0 1 1056 672" fill="none" stroke="#2D6A4F" stroke-width="2"/>
+          <line x1="1008" y1="576" x2="1008" y2="672" stroke="#2D6A4F" stroke-width="2"/>
+          <path d="M924 632 Q1008 606 1092 632" fill="none" stroke="#2D6A4F" stroke-width="2"/>
+          <circle cx="980" cy="655" r="14" fill="#52B788"/><circle cx="1000" cy="650" r="18" fill="#3E9C6E"/><circle cx="1030" cy="656" r="13" fill="#52B788"/>
+          <circle cx="1008" cy="572" r="7" fill="#FFB703"/>
+
+          <!-- Tour végétale -->
+          <rect x="1140" y="378" width="76" height="290" rx="38" fill="#FFF8E7" stroke="#2D6A4F" stroke-width="3"/>
+          <g fill="#FFE3A0" stroke="#2D6A4F" stroke-width="1.5">
+            <rect x="1162" y="430" width="32" height="20" rx="10"/>
+            <rect x="1162" y="470" width="32" height="20" rx="10"/>
+            <rect x="1162" y="510" width="32" height="20" rx="10"/>
+            <rect x="1162" y="550" width="32" height="20" rx="10"/>
+            <rect x="1162" y="590" width="32" height="20" rx="10"/>
+          </g>
+          <g fill="#52B788">
+            <circle cx="1140" cy="420" r="11"/><circle cx="1134" cy="460" r="9"/><circle cx="1142" cy="500" r="12"/>
+            <circle cx="1136" cy="545" r="10"/><circle cx="1218" cy="440" r="9"/><circle cx="1222" cy="520" r="11"/>
+            <circle cx="1216" cy="580" r="9"/><circle cx="1140" cy="610" r="11"/>
+          </g>
+          <g>
+            <path d="M1132 380 L1178 340 L1224 380 Z" fill="url(#panel)" stroke="#2D6A4F" stroke-width="2.5" stroke-linejoin="round"/>
+            <line x1="1155" y1="360" x2="1201" y2="360" stroke="#FFF8E7" stroke-width="1.5"/>
+            <line x1="1178" y1="340" x2="1178" y2="380" stroke="#FFF8E7" stroke-width="1.5"/>
+          </g>
+          <circle cx="1178" cy="326" r="10" fill="#3E9C6E"/><circle cx="1166" cy="332" r="8" fill="#52B788"/><circle cx="1190" cy="332" r="8" fill="#52B788"/>
+
+          <!-- Grande éolienne -->
+          <line x1="1320" y1="650" x2="1320" y2="452" stroke="#FFF8E7" stroke-width="7" stroke-linecap="round"/>
+          <g class="turbine turbine--big" data-origin="1320 452">
+            <path d="M1320 452 C1311 412 1314 384 1320 362 C1326 384 1329 412 1320 452 Z" fill="#FFF8E7" stroke="#2D6A4F" stroke-width="2"/>
+            <path d="M1320 452 C1311 412 1314 384 1320 362 C1326 384 1329 412 1320 452 Z" fill="#FFF8E7" stroke="#2D6A4F" stroke-width="2" transform="rotate(120 1320 452)"/>
+            <path d="M1320 452 C1311 412 1314 384 1320 362 C1326 384 1329 412 1320 452 Z" fill="#FFF8E7" stroke="#2D6A4F" stroke-width="2" transform="rotate(240 1320 452)"/>
+            <circle cx="1320" cy="452" r="7" fill="#2D6A4F"/>
+          </g>
+
+          <!-- Panneaux au sol -->
+          <g fill="url(#panel)" stroke="#2D6A4F" stroke-width="1.5">
+            <path d="M1360 646 l26 -14 h30 l-26 14 Z"/>
+            <path d="M1250 664 l26 -14 h30 l-26 14 Z"/>
+            <path d="M640 690 l22 -12 h26 l-22 12 Z"/>
+          </g>
+        </svg>
+      </div>
+
+      <canvas class="hero__leaves" aria-hidden="true"></canvas>
+
+      <!-- Premier plan -->
+      <div class="hero__layer hero__layer--near" aria-hidden="true">
+        <svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMax slice">
+          <path d="M0 812 C200 752 380 794 560 776 C760 756 900 798 1100 768 C1260 746 1360 768 1440 758 V900 H0Z" fill="#2D6A4F"/>
+          <path d="M0 850 C260 818 520 846 760 830 C1000 814 1220 842 1440 822 V900 H0Z" fill="#245A42"/>
+          <g fill="#245A42">
+            <path d="M60 800 C40 740 60 690 96 660 C98 712 86 760 60 800Z"/>
+            <path d="M84 806 C96 744 132 716 176 706 C158 756 126 788 84 806Z"/>
+            <path d="M40 812 C10 770 6 730 20 696 C40 736 46 776 40 812Z"/>
+          </g>
+          <g fill="#1F4D39">
+            <path d="M1370 790 C1360 730 1378 690 1410 664 C1414 716 1400 760 1370 790Z"/>
+            <path d="M1352 796 C1318 760 1306 722 1312 690 C1338 724 1352 760 1352 796Z"/>
+          </g>
+          <g stroke="#52B788" stroke-width="2.5" stroke-linecap="round" fill="none" opacity=".7">
+            <path d="M300 790 q4 -24 -4 -40"/><path d="M310 790 q8 -20 18 -30"/><path d="M290 792 q-8 -14 -20 -20"/>
+            <path d="M980 782 q4 -24 -4 -40"/><path d="M990 782 q8 -20 18 -30"/>
+          </g>
+        </svg>
+      </div>
+
+      <div class="container hero__content">
+        <div class="hero__copy">
+          <p class="eyebrow hero__eyebrow"><span class="eyebrow__dot" aria-hidden="true"></span>Pilote · Oise et territoires limitrophes</p>
+          <h1 class="hero__title" id="hero-title">
+            <span class="line"><span class="line__inner">Les bons pros,</span></span>
+            <span class="line"><span class="line__inner"><em>tout près</em> de votre</span></span>
+            <span class="line"><span class="line__inner">association.</span></span>
+          </h1>
+          <p class="hero__lead">Annuaire géolocalisé, offres partenaires transparentes et agenda de la vie locale&nbsp;: Locana met en relation associations, commerçants, artisans et producteurs autour de chez vous.</p>
+
+          <form class="search" id="hero-search" role="search" aria-label="Rechercher un professionnel">
+            <label class="search__field">
+              <span class="search__label">Que recherchez-vous&nbsp;?</span>
+              <span class="search__input-wrap"><i data-lucide="search"></i>
+                <input class="search__input" type="text" name="q" placeholder="Sapins, chocolats, imprimeur…" autocomplete="off">
+              </span>
+            </label>
+            <label class="search__field search__field--city">
+              <span class="search__label">Autour de quelle ville&nbsp;?</span>
+              <span class="search__input-wrap"><i data-lucide="map-pin"></i>
+                <input class="search__input" type="text" name="ville" placeholder="Commune ou code postal" autocomplete="address-level2">
+              </span>
+            </label>
+            <label class="search__field search__field--radius">
+              <span class="search__label">Rayon</span>
+              <select class="search__select" name="rayon">
+                <option value="10">10 km</option>
+                <option value="20">20 km</option>
+                <option value="30" selected>30 km</option>
+                <option value="50">50 km</option>
+                <option value="100">100 km</option>
+              </select>
+            </label>
+            <button class="btn btn--solar magnetic" type="submit">Rechercher <i data-lucide="arrow-right" data-arrow></i></button>
+          </form>
+
+          <div class="hero__chips">
+            <span class="hero__chips-label">Recherches fréquentes&nbsp;:</span>
+            <button class="chip" type="button" data-fill="Sapins de Noël"><i data-lucide="tree-pine"></i>Sapins de Noël</button>
+            <button class="chip" type="button" data-fill="Chocolats"><i data-lucide="candy"></i>Chocolats</button>
+            <button class="chip" type="button" data-fill="Impression"><i data-lucide="printer"></i>Impression</button>
+            <button class="chip" type="button" data-fill="Producteurs locaux"><i data-lucide="wheat"></i>Producteurs</button>
+          </div>
+        </div>
+
+        <div class="hero__float" aria-hidden="true">
+          <div class="fcard fcard--pro glass" data-depth="1.2">
+            <div class="fcard__row">
+              <div class="fcard__icon"><i data-lucide="tree-pine"></i></div>
+              <div>
+                <div class="fcard__title">Pépinière des Coteaux</div>
+                <div class="fcard__meta">Sapins de Noël · Val-d'Oise</div>
+              </div>
+            </div>
+            <div class="fcard__foot">
+              <span class="badge badge--verified"><i data-lucide="badge-check"></i>Vérifié</span>
+              <span class="distance"><i data-lucide="navigation"></i>11,8 km</span>
+            </div>
+          </div>
+
+          <div class="fcard fcard--contrib glass" data-depth="2">
+            <div class="fcard__row">
+              <div class="fcard__icon fcard__icon--solar"><i data-lucide="hand-coins"></i></div>
+              <div>
+                <div class="fcard__title">Vente de sapins</div>
+                <div class="fcard__meta">APE de l'école des Tilleuls</div>
+              </div>
+            </div>
+            <div class="meter"><div class="meter__fill"></div></div>
+            <div class="fcard__foot">
+              <span class="fcard__meta">Contribution association</span>
+              <span class="badge badge--partner">5&nbsp;%</span>
+            </div>
+          </div>
+
+          <div class="fcard fcard--event glass" data-depth="0.8">
+            <div class="fcard__row">
+              <div class="fcard__icon fcard__icon--sky"><i data-lucide="calendar-heart"></i></div>
+              <div>
+                <div class="fcard__title">Marché de Noël</div>
+                <div class="fcard__meta">Sam. 5 déc. · à 9 km</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <a class="hero__scroll" href="#manifeste" aria-label="Défiler vers la suite">
+        <span class="hero__scroll-track"><span class="hero__scroll-dot"></span></span>
+        Découvrir
+      </a>
+    </section>
+
+    <!-- ============ MANIFESTE ============ -->
+    <section class="section manifesto" id="manifeste" aria-labelledby="manifesto-title">
+      <svg class="vine vine--manifesto" viewBox="0 0 220 900" preserveAspectRatio="none" aria-hidden="true">
+        <path class="vine__stem" d="M180 0 C120 120 210 220 150 340 C90 460 200 560 140 690 C100 780 160 840 150 900"/>
+        <path class="vine__leaf" d="M160 160 c-30 -10 -44 -34 -40 -60 c28 6 42 30 40 60z"/>
+        <path class="vine__leaf" d="M164 420 c30 -6 50 -28 52 -54 c-28 2 -48 24 -52 54z"/>
+        <path class="vine__leaf" d="M138 610 c-30 -12 -42 -36 -36 -62 c26 8 40 32 36 62z"/>
+        <path class="vine__leaf" d="M150 800 c28 -8 46 -32 46 -58 c-26 4 -44 28 -46 58z"/>
+      </svg>
+      <div class="container manifesto__grid">
+        <div class="manifesto__aside">
+          <span class="manifesto__num">01 — Pourquoi</span>
+          <p class="eyebrow" id="manifesto-title">Une histoire de proximité</p>
+        </div>
+        <div>
+          <p class="manifesto__text" data-split-words>
+            Une association de parents d'élèves cherche des <span class="word--accent">sapins</span> pour sa vente de Noël. À <span class="word--accent">12&nbsp;km</span>, juste de l'autre côté de la limite départementale, un producteur en cultive. Ils ne se connaissent pas encore. <span class="word--solar">Locana</span> les présente, clarifie l'offre et suit chaque <span class="word--accent">contribution</span> reversée.
+          </p>
+          <div class="manifesto__sign" data-reveal>
+            <a class="btn btn--ghost" href="a-propos.html">Notre démarche <i data-lucide="arrow-right" data-arrow></i></a>
+            <span class="badge badge--soon"><i data-lucide="shield-check"></i>Plateforme indépendante de toute association</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PUBLICS ============ -->
+    <section class="section roles" aria-labelledby="roles-title">
+      <div class="container roles__grid">
+        <div class="roles__intro" data-reveal-group>
+          <p class="eyebrow"><span class="eyebrow__dot" aria-hidden="true"></span>02 — Pour qui</p>
+          <h2 class="section-title" id="roles-title">Un outil pratique, <em>pas un réseau social.</em></h2>
+          <p class="section-lead">Pas de fil public, pas de commentaires ouverts&nbsp;: un annuaire fiable, des espaces privés et des partenariats clairs pour chacun.</p>
+        </div>
+
+        <article class="role role--asso" data-reveal>
+          <div class="role__top">
+            <div class="role__icon"><i data-lucide="users-round"></i></div>
+            <span class="badge badge--partner">Inscription gratuite</span>
+          </div>
+          <h3 class="role__title">Associations</h3>
+          <p class="role__desc">Parents d'élèves, clubs sportifs, culturels ou solidaires&nbsp;: trouvez les bons fournisseurs pour vos ventes et vos événements.</p>
+          <ul class="role__list">
+            <li><i data-lucide="check"></i>Recherche par commune et rayon</li>
+            <li><i data-lucide="check"></i>Code partenaire unique et QR code</li>
+            <li><i data-lucide="check"></i>Recommander ou inviter un pro</li>
+            <li><i data-lucide="check"></i>Suivi des contributions</li>
+          </ul>
+          <a class="role__link" href="services.html#associations">Découvrir l'espace association <i data-lucide="arrow-right"></i></a>
+          <svg class="role__deco" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="90" fill="none" stroke="#FFB703" stroke-width="2" stroke-dasharray="4 8"/><circle cx="100" cy="100" r="56" fill="#FFB703"/></svg>
+        </article>
+
+        <article class="role role--pro" data-reveal>
+          <div class="role__top">
+            <div class="role__icon"><i data-lucide="store"></i></div>
+            <span class="badge badge--verified"><i data-lucide="badge-check"></i>Profils vérifiés</span>
+          </div>
+          <h3 class="role__title">Professionnels</h3>
+          <p class="role__desc">Commerçants, artisans, producteurs, prestataires de loisirs&nbsp;: une vitrine structurée pour toucher les associations locales et leurs familles.</p>
+          <ul class="role__list">
+            <li><i data-lucide="check"></i>Fiche multi-catégories</li>
+            <li><i data-lucide="check"></i>Zones de livraison ou d'intervention</li>
+            <li><i data-lucide="check"></i>Offres avec réduction et contribution</li>
+            <li><i data-lucide="check"></i>Déclaration simple des ventes</li>
+          </ul>
+          <a class="role__link" href="services.html#professionnels">Découvrir l'espace professionnel <i data-lucide="arrow-right"></i></a>
+        </article>
+
+        <article class="role role--family" data-reveal>
+          <div class="role__top">
+            <div class="role__icon"><i data-lucide="heart-handshake"></i></div>
+            <span class="badge badge--soon">À terme</span>
+          </div>
+          <h3 class="role__title">Familles &amp; habitants</h3>
+          <p class="role__desc">Présentez le code de votre association chez un professionnel partenaire&nbsp;: vous profitez d'un avantage, l'association reçoit une contribution.</p>
+          <a class="role__link" href="agenda.html">Explorer la vie locale <i data-lucide="arrow-right"></i></a>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ PROXIMITÉ ============ -->
+    <section class="prox" id="proximite" aria-labelledby="prox-title">
+      <div class="container prox__grid">
+        <div class="prox__copy">
+          <p class="eyebrow"><span class="eyebrow__dot" aria-hidden="true"></span>03 — Recherche géographique</p>
+          <h2 class="section-title" id="prox-title">La proximité avant <em>les frontières.</em></h2>
+          <p class="section-lead">La recherche repose sur la distance réelle, pas sur le département. Une association de l'Oise trouve aussi le producteur du Val-d'Oise situé à quelques kilomètres.</p>
+          <ol class="prox__steps">
+            <li class="pstep is-active" data-step="0">
+              <span class="pstep__num">01</span>
+              <div><div class="pstep__title">Votre commune</div><p class="pstep__text">Commune, code postal ou adresse comme point de départ.</p></div>
+            </li>
+            <li class="pstep" data-step="1">
+              <span class="pstep__num">02</span>
+              <div><div class="pstep__title">Votre rayon</div><p class="pstep__text">10, 20, 30, 50 ou 100&nbsp;km — au-delà des limites administratives.</p></div>
+            </li>
+            <li class="pstep" data-step="2">
+              <span class="pstep__num">03</span>
+              <div><div class="pstep__title">Des résultats triés par distance</div><p class="pstep__text">En liste claire, toujours disponible, ou sur la carte.</p></div>
+            </li>
+          </ol>
+        </div>
+
+        <div class="map" role="img" aria-label="Démonstration : quatre professionnels trouvés dans un rayon de 30 km, dont deux dans le Val-d'Oise.">
+          <svg class="map__svg" viewBox="0 0 600 520" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <defs>
+              <pattern id="contours" width="120" height="120" patternUnits="userSpaceOnUse">
+                <path d="M0 60 C30 40 60 80 120 50" fill="none" stroke="#2D6A4F" stroke-opacity=".07" stroke-width="1.2"/>
+                <path d="M0 100 C40 80 70 120 120 95" fill="none" stroke="#2D6A4F" stroke-opacity=".07" stroke-width="1.2"/>
+                <path d="M0 20 C30 5 80 35 120 12" fill="none" stroke="#2D6A4F" stroke-opacity=".07" stroke-width="1.2"/>
+              </pattern>
+            </defs>
+            <rect width="600" height="520" fill="url(#contours)"/>
+            <path d="M-10 300 C60 280 120 330 200 300 S340 250 420 290 S560 320 620 300" fill="none" stroke="#219EBC" stroke-opacity=".35" stroke-width="10" stroke-linecap="round"/>
+            <path class="map__border" d="M0 376 C120 350 220 410 330 372 C430 338 520 362 600 332" fill="none" stroke="#6B4226" stroke-width="2" stroke-dasharray="2 8" stroke-linecap="round"/>
+            <text class="map__label" x="28" y="44">OISE (60)</text>
+            <text class="map__label" x="28" y="500">VAL-D'OISE (95)</text>
+
+            <g class="map__rings">
+              <circle class="map__ring" cx="300" cy="230" r="70"/>
+              <circle class="map__ring" cx="300" cy="230" r="140"/>
+              <circle class="map__ring" cx="300" cy="230" r="210"/>
+              <text class="map__ring-label" x="377" y="226">10 km</text>
+              <text class="map__ring-label" x="447" y="226">20 km</text>
+              <text class="map__ring-label" x="517" y="226">30 km</text>
+            </g>
+
+            <g class="map__pins">
+              <g class="map__pin" data-x="345" data-y="196"><path d="M345 196 c-12 -16 -16 -22 -16 -30 a16 16 0 0 1 32 0 c0 8 -4 14 -16 30z" fill="#2D6A4F"/><circle cx="345" cy="166" r="6" fill="#FFF8E7"/></g>
+              <g class="map__pin" data-x="352" data-y="400"><path d="M352 400 c-12 -16 -16 -22 -16 -30 a16 16 0 0 1 32 0 c0 8 -4 14 -16 30z" fill="#219EBC"/><circle cx="352" cy="370" r="6" fill="#FFF8E7"/></g>
+              <g class="map__pin" data-x="168" data-y="162"><path d="M168 162 c-12 -16 -16 -22 -16 -30 a16 16 0 0 1 32 0 c0 8 -4 14 -16 30z" fill="#2D6A4F"/><circle cx="168" cy="132" r="6" fill="#FFF8E7"/></g>
+              <g class="map__pin" data-x="470" data-y="430"><path d="M470 430 c-12 -16 -16 -22 -16 -30 a16 16 0 0 1 32 0 c0 8 -4 14 -16 30z" fill="#219EBC"/><circle cx="470" cy="400" r="6" fill="#FFF8E7"/></g>
+            </g>
+
+            <g class="map__home">
+              <circle class="map__pulse" cx="300" cy="230" r="22" fill="#FFB703" fill-opacity=".35"/>
+              <circle cx="300" cy="230" r="13" fill="#FFB703" stroke="#FFF8E7" stroke-width="4"/>
+            </g>
+          </svg>
+
+          <div class="map__legend glass">
+            <span><i class="lg-dot" style="background:#FFB703"></i>Association</span>
+            <span><i class="lg-dot" style="background:#2D6A4F"></i>Oise</span>
+            <span><i class="lg-dot" style="background:#219EBC"></i>Val-d'Oise</span>
+          </div>
+
+          <div class="map__results glass">
+            <div class="map__results-head"><span>4 résultats · 30 km</span><span class="mono">Démo</span></div>
+            <div class="mres">
+              <span class="mres__name">Ferme des Trois Chênes</span>
+              <span class="mres__meta">Producteurs locaux · <span class="mres__dept">Oise</span></span>
+              <span class="distance">4,2 km</span>
+            </div>
+            <div class="mres">
+              <span class="mres__name">Pépinière des Coteaux</span>
+              <span class="mres__meta">Sapins de Noël · <span class="mres__dept mres__dept--other"><i data-lucide="move-diagonal"></i>Val-d'Oise</span></span>
+              <span class="distance">11,8 km</span>
+            </div>
+            <div class="mres">
+              <span class="mres__name">Atelier Cire &amp; Mèche</span>
+              <span class="mres__meta">Bougies · <span class="mres__dept">Oise</span></span>
+              <span class="distance">17,5 km</span>
+            </div>
+            <div class="mres">
+              <span class="mres__name">Rucher du Vexin</span>
+              <span class="mres__meta">Miel · <span class="mres__dept mres__dept--other"><i data-lucide="move-diagonal"></i>Val-d'Oise</span></span>
+              <span class="distance">26,3 km</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CATÉGORIES ============ -->
+    <section class="section cats" aria-labelledby="cats-title">
+      <div class="container">
+        <div class="section-head" data-reveal-group>
+          <p class="eyebrow"><span class="eyebrow__dot" aria-hidden="true"></span>04 — Annuaire</p>
+          <h2 class="section-title" id="cats-title">Sept familles de métiers, <em>une seule recherche.</em></h2>
+          <p class="section-lead">Un professionnel peut figurer dans plusieurs catégories&nbsp;: le fleuriste qui décore aussi les salles apparaît dans «&nbsp;Fleurs&nbsp;» et «&nbsp;Événementiel&nbsp;».</p>
+        </div>
+
+        <div class="cats__grid">
+          <a class="cat cat--a" href="annuaire.html?categorie=alimentation" data-cat>
+            <div class="cat__head"><div class="cat__icon"><i data-lucide="croissant"></i></div><span class="cat__letter">A</span></div>
+            <div>
+              <h3 class="cat__title">Alimentation &amp; produits gourmands</h3>
+              <ul class="cat__subs"><li>Saucissons &amp; charcuterie</li><li>Chocolats</li><li>Biscuits &amp; confiseries</li><li>Fromages</li><li>Miel</li><li>Produits régionaux</li><li>Paniers gourmands</li><li>Producteurs locaux</li></ul>
+            </div>
+            <svg class="cat__deco" viewBox="0 0 200 200" aria-hidden="true"><circle cx="110" cy="110" r="80" fill="#FFB703" opacity=".35"/><path d="M110 170 C70 150 60 100 110 50 C160 100 150 150 110 170Z" fill="#2D6A4F" opacity=".2"/></svg>
+          </a>
+          <a class="cat cat--b" href="annuaire.html?categorie=fleurs" data-cat>
+            <div class="cat__head"><div class="cat__icon"><i data-lucide="flower-2"></i></div><span class="cat__letter">B</span></div>
+            <div>
+              <h3 class="cat__title">Fleurs, plantes &amp; saisonnier</h3>
+              <ul class="cat__subs"><li>Sapins de Noël</li><li>Bouquets</li><li>Bulbes &amp; graines</li><li>+3</li></ul>
+            </div>
+          </a>
+          <a class="cat cat--c" href="annuaire.html?categorie=beaute" data-cat>
+            <div class="cat__head"><div class="cat__icon"><i data-lucide="sparkles"></i></div><span class="cat__letter">C</span></div>
+            <div>
+              <h3 class="cat__title">Beauté &amp; bien-être</h3>
+              <ul class="cat__subs"><li>Savons artisanaux</li><li>Cosmétiques</li><li>Coffrets</li><li>+3</li></ul>
+            </div>
+          </a>
+          <a class="cat cat--d" href="annuaire.html?categorie=artisanat" data-cat>
+            <div class="cat__head"><div class="cat__icon"><i data-lucide="flame"></i></div><span class="cat__letter">D</span></div>
+            <div>
+              <h3 class="cat__title">Artisanat &amp; créations</h3>
+              <ul class="cat__subs"><li>Bougies</li><li>Bijoux</li><li>Fait main</li><li>+3</li></ul>
+            </div>
+          </a>
+          <a class="cat cat--e" href="annuaire.html?categorie=loisirs" data-cat>
+            <div class="cat__head"><div class="cat__icon"><i data-lucide="tent-tree"></i></div><span class="cat__letter">E</span></div>
+            <div>
+              <h3 class="cat__title">Loisirs, sport &amp; culture</h3>
+              <ul class="cat__subs"><li>Parcs de loisirs</li><li>Spectacles</li><li>Activités sportives</li><li>Ateliers</li><li>Sorties &amp; visites</li><li>Animations familles</li></ul>
+            </div>
+          </a>
+          <a class="cat cat--f" href="annuaire.html?categorie=evenementiel" data-cat>
+            <div class="cat__head"><div class="cat__icon"><i data-lucide="printer"></i></div><span class="cat__letter">F</span></div>
+            <div>
+              <h3 class="cat__title">Événementiel &amp; fournitures</h3>
+              <ul class="cat__subs"><li>Impression</li><li>Goodies</li><li>Location de matériel</li><li>+4</li></ul>
+            </div>
+          </a>
+          <a class="cat cat--g" href="annuaire.html?categorie=services" data-cat>
+            <div class="cat__head"><div class="cat__icon"><i data-lucide="wrench"></i></div><span class="cat__letter">G</span></div>
+            <div>
+              <h3 class="cat__title">Artisans &amp; services</h3>
+              <ul class="cat__subs"><li>Plomberie</li><li>Électricité</li><li>Peinture</li><li>Jardinage</li><li>Réparation</li><li>Entretien</li></ul>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CODE PARTENAIRE ============ -->
+    <section class="section code" id="code-partenaire" aria-labelledby="code-title">
+      <div class="container">
+        <div class="section-head" data-reveal-group>
+          <p class="eyebrow">05 — Partenariats</p>
+          <h2 class="section-title" id="code-title">Un code, trois montants <em>jamais confondus.</em></h2>
+          <p class="section-lead">Chaque association validée reçoit un code permanent. Le professionnel fixe librement ses conditions&nbsp;; la réduction famille, la contribution à l'association et l'éventuelle rémunération de la plateforme sont toujours calculées et affichées séparément.</p>
+        </div>
+
+        <div class="code__grid">
+          <div class="pass" id="pass" data-reveal>
+            <div class="pass__shine" aria-hidden="true"></div>
+            <div class="pass__top">
+              <div class="pass__org">APE de l'école des Tilleuls<small>Association validée</small></div>
+              <span class="badge badge--partner"><i data-lucide="badge-check"></i>Active</span>
+            </div>
+            <div>
+              <div class="pass__label">Code partenaire</div>
+              <div class="pass__code" id="pass-code">APE-PUISEUX26</div>
+            </div>
+            <div class="pass__body">
+              <div class="pass__qr" id="pass-qr" aria-label="Aperçu de QR code" role="img"></div>
+              <p class="pass__note">Les familles le présentent en magasin, par téléphone ou par e-mail. Le professionnel enregistre ensuite la vente dans son espace.</p>
+            </div>
+            <div class="pass__actions">
+              <button class="btn btn--solar btn--sm" type="button" id="copy-code"><i data-lucide="copy"></i><span>Copier le code</span></button>
+              <button class="btn btn--ghost-light btn--sm" type="button" data-toast="Le téléchargement du QR code arrivera avec l'espace association."><i data-lucide="qr-code"></i>QR code</button>
+              <button class="btn btn--ghost-light btn--sm" type="button" data-toast="L'impression de l'affichette arrivera avec l'espace association."><i data-lucide="printer"></i>Imprimer</button>
+            </div>
+            <p class="mono" style="opacity:.6">Exemple fictif</p>
+          </div>
+
+          <div class="calc" data-reveal>
+            <div class="calc__head">
+              <h3 class="calc__title">Simulateur de vente</h3>
+              <span class="badge badge--registered"><i data-lucide="calculator"></i>Calcul transparent</span>
+            </div>
+            <div class="calc__controls">
+              <label class="field">
+                <span class="field__label">Montant de la vente&nbsp;: <span class="calc__amount" id="amount-out">120,00&nbsp;€</span></span>
+                <input class="range" type="range" id="amount" min="10" max="500" step="5" value="120">
+              </label>
+              <label class="field">
+                <span class="field__label">Réduction famille (%)</span>
+                <input class="field__input" type="number" id="rate-family" min="0" max="50" step="0.5" value="5" inputmode="decimal">
+              </label>
+              <label class="field">
+                <span class="field__label">Contribution asso (%)</span>
+                <input class="field__input" type="number" id="rate-asso" min="0" max="50" step="0.5" value="5" inputmode="decimal">
+              </label>
+            </div>
+
+            <div class="calc__out" aria-live="polite">
+              <div class="out out--family">
+                <span class="out__label"><i data-lucide="tag"></i>Réduction famille</span>
+                <span class="out__value" id="out-family">6,00 €</span>
+                <span class="out__formula" id="f-family">120,00 × 5 %</span>
+              </div>
+              <div class="out out--paid">
+                <span class="out__label"><i data-lucide="receipt"></i>Montant payé</span>
+                <span class="out__value" id="out-paid">114,00 €</span>
+                <span class="out__formula" id="f-paid">120,00 − 6,00</span>
+              </div>
+              <div class="out out--asso">
+                <span class="out__label"><i data-lucide="hand-coins"></i>Contribution asso</span>
+                <span class="out__value" id="out-asso">5,70 €</span>
+                <span class="out__formula" id="f-asso">114,00 × 5 %</span>
+              </div>
+              <div class="out out--platform">
+                <span class="out__label"><i data-lucide="landmark"></i>Rémunération de la plateforme</span>
+                <span class="mono">Modalités à définir — toujours affichée à part</span>
+              </div>
+            </div>
+            <p class="calc__disclaimer"><i data-lucide="info"></i>Exemple illustratif&nbsp;: ici, la contribution est calculée sur le montant payé. Chaque professionnel définit l'assiette et les taux dans les conditions de son offre.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONFIANCE ============ -->
+    <section class="section trust" aria-labelledby="trust-title">
+      <div class="container">
+        <div class="section-head" data-reveal-group>
+          <p class="eyebrow">06 — Confiance</p>
+          <h2 class="section-title" id="trust-title">Aucun profil publié <em>sans contrôle.</em></h2>
+          <p class="section-lead">Chaque association et chaque professionnel est examiné par l'équipe avant publication. Quatre statuts distincts, affichés sans ambiguïté.</p>
+        </div>
+
+        <div class="trust__track">
+          <div class="trust__line" aria-hidden="true"><div class="trust__line-fill"></div></div>
+          <div class="status status--rec">
+            <div class="status__icon"><i data-lucide="message-square-quote"></i></div>
+            <span class="status__step">Étape 1</span>
+            <h3 class="status__title">Recommandé</h3>
+            <p class="status__text">Une association a proposé ce professionnel. Il ne s'est pas encore inscrit.</p>
+          </div>
+          <div class="status status--reg">
+            <div class="status__icon"><i data-lucide="user-round-plus"></i></div>
+            <span class="status__step">Étape 2</span>
+            <h3 class="status__title">Inscrit</h3>
+            <p class="status__text">Le professionnel a créé son compte et complète sa fiche.</p>
+          </div>
+          <div class="status status--ver">
+            <div class="status__icon"><i data-lucide="shield-check"></i></div>
+            <span class="status__step">Étape 3</span>
+            <h3 class="status__title">Vérifié</h3>
+            <p class="status__text">Les informations nécessaires ont été contrôlées par la plateforme.</p>
+          </div>
+          <div class="status status--par">
+            <div class="status__icon"><i data-lucide="handshake"></i></div>
+            <span class="status__step">Étape 4</span>
+            <h3 class="status__title">Partenaire associatif</h3>
+            <p class="status__text">Il propose une offre avec un avantage familles et/ou une contribution.</p>
+          </div>
+        </div>
+
+        <div class="trust__note" data-reveal>
+          <i data-lucide="info"></i>
+          <p>Une recommandation ne signifie ni que le professionnel a été contrôlé, ni qu'il a accepté un partenariat. Chaque statut est affiché avec une icône et un libellé, jamais par la couleur seule.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ AGENDA ============ -->
+    <section class="agenda" id="vie-locale" aria-labelledby="agenda-title">
+      <div class="agenda__pin">
+        <div class="container agenda__head">
+          <div class="section-head" style="margin-bottom:0" data-reveal-group>
+            <p class="eyebrow"><span class="eyebrow__dot" aria-hidden="true"></span>07 — Vie locale</p>
+            <h2 class="section-title" id="agenda-title">Ce qui se passe <em>autour de chez vous.</em></h2>
+          </div>
+          <div class="agenda__filters" role="group" aria-label="Filtrer par période (aperçu)">
+            <button class="chip" type="button" aria-pressed="true">Ce week-end</button>
+            <button class="chip" type="button" aria-pressed="false">Ce mois-ci</button>
+            <button class="chip" type="button" aria-pressed="false">Marchés</button>
+            <button class="chip" type="button" aria-pressed="false">Enfants</button>
+          </div>
+        </div>
+
+        <div class="agenda__track" id="agenda-track">
+          <article class="event">
+            <div class="event__art">
+              <svg viewBox="0 0 360 190" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+                <rect width="360" height="190" fill="#FFE7AE"/><circle cx="270" cy="70" r="46" fill="#FFB703"/>
+                <path d="M0 150 C80 120 160 160 240 135 S340 130 360 125 V190 H0Z" fill="#52B788"/>
+                <path d="M60 150 l30 -50 l30 50 Z M78 128 h24 M70 140 h40" fill="#2D6A4F" stroke="#2D6A4F" stroke-width="2"/>
+                <path d="M150 150 l24 -40 l24 40 Z" fill="#2D6A4F"/><path d="M220 150 l20 -34 l20 34 Z" fill="#245A42"/>
+                <g fill="#C1440E"><circle cx="90" cy="112" r="3"/><circle cx="82" cy="132" r="3"/><circle cx="174" cy="124" r="3"/></g>
+              </svg>
+              <div class="event__date"><span class="event__day">05</span><span class="event__month">déc.</span></div>
+              <span class="chip chip--type event__type">Marché de Noël</span>
+            </div>
+            <div class="event__body">
+              <h3 class="event__title">Marché de Noël des artisans</h3>
+              <div class="event__meta">
+                <span><i data-lucide="clock"></i>10 h – 18 h · Entrée libre</span>
+                <span><i data-lucide="map-pin"></i>Senlis · <b class="distance">9 km</b></span>
+                <span><i data-lucide="users-round"></i>Comité des fêtes</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="event">
+            <div class="event__art">
+              <svg viewBox="0 0 360 190" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+                <rect width="360" height="190" fill="#DCEFF5"/>
+                <path d="M0 150 C100 130 200 160 360 140 V190 H0Z" fill="#82CBA3"/>
+                <g stroke="#2D6A4F" stroke-width="2"><line x1="40" y1="40" x2="320" y2="60"/></g>
+                <g><path d="M70 42 l14 26 l14 -24 Z" fill="#FFB703"/><path d="M120 46 l14 26 l14 -24 Z" fill="#C1440E"/><path d="M170 50 l14 26 l14 -24 Z" fill="#219EBC"/><path d="M220 53 l14 26 l14 -24 Z" fill="#C7B8EA"/><path d="M270 56 l14 26 l14 -24 Z" fill="#52B788"/></g>
+                <rect x="110" y="104" width="140" height="50" rx="12" fill="#FFF8E7" stroke="#2D6A4F" stroke-width="2"/>
+                <path d="M110 116 h140" stroke="#C1440E" stroke-width="10"/>
+              </svg>
+              <div class="event__date"><span class="event__day">06</span><span class="event__month">déc.</span></div>
+              <span class="chip chip--type event__type">Kermesse</span>
+            </div>
+            <div class="event__body">
+              <h3 class="event__title">Kermesse d'hiver de l'école</h3>
+              <div class="event__meta">
+                <span><i data-lucide="clock"></i>14 h – 17 h · Jeux et goûter</span>
+                <span><i data-lucide="map-pin"></i>Puiseux-le-Hauberger · <b class="distance">2 km</b></span>
+                <span><i data-lucide="users-round"></i>APE de l'école des Tilleuls</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="event">
+            <div class="event__art">
+              <svg viewBox="0 0 360 190" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+                <rect width="360" height="190" fill="#F8E1D5"/>
+                <path d="M0 160 C120 140 240 170 360 150 V190 H0Z" fill="#C1440E" opacity=".25"/>
+                <g fill="#FFF8E7" stroke="#6B4226" stroke-width="2">
+                  <rect x="50" y="90" width="80" height="60" rx="10"/><rect x="150" y="80" width="70" height="70" rx="10"/><rect x="240" y="100" width="70" height="50" rx="10"/>
+                </g>
+                <g fill="#6B4226"><circle cx="90" cy="120" r="12"/><rect x="170" y="100" width="30" height="30" rx="6"/><path d="M255 130 l20 -20 l20 20 Z"/></g>
+              </svg>
+              <div class="event__date"><span class="event__day">13</span><span class="event__month">déc.</span></div>
+              <span class="chip chip--type event__type">Brocante</span>
+            </div>
+            <div class="event__body">
+              <h3 class="event__title">Bourse aux jouets solidaire</h3>
+              <div class="event__meta">
+                <span><i data-lucide="clock"></i>9 h – 13 h · 3 € la table</span>
+                <span><i data-lucide="map-pin"></i>Méru · <b class="distance">14 km</b></span>
+                <span><i data-lucide="users-round"></i>Association sportive locale</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="event">
+            <div class="event__art">
+              <svg viewBox="0 0 360 190" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+                <rect width="360" height="190" fill="#EEE8FA"/>
+                <circle cx="180" cy="210" r="140" fill="#C7B8EA"/>
+                <path d="M120 150 Q180 60 240 150" fill="none" stroke="#2D6A4F" stroke-width="4"/>
+                <g fill="#FFB703"><circle cx="150" cy="70" r="5"/><circle cx="210" cy="60" r="4"/><circle cx="180" cy="44" r="6"/><circle cx="250" cy="84" r="3"/><circle cx="110" cy="90" r="3"/></g>
+                <rect x="150" y="120" width="60" height="40" rx="8" fill="#FFF8E7" stroke="#2D6A4F" stroke-width="2"/>
+              </svg>
+              <div class="event__date"><span class="event__day">19</span><span class="event__month">déc.</span></div>
+              <span class="chip chip--type event__type">Spectacle</span>
+            </div>
+            <div class="event__body">
+              <h3 class="event__title">Conte musical pour les enfants</h3>
+              <div class="event__meta">
+                <span><i data-lucide="clock"></i>16 h · Sur réservation</span>
+                <span><i data-lucide="map-pin"></i>Chambly · <b class="distance">18 km</b></span>
+                <span><i data-lucide="users-round"></i>Compagnie de théâtre amateur</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="event">
+            <div class="event__art">
+              <svg viewBox="0 0 360 190" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+                <rect width="360" height="190" fill="#DDF1E5"/>
+                <path d="M0 140 C90 120 180 150 270 130 S350 125 360 122 V190 H0Z" fill="#52B788"/>
+                <g fill="#2D6A4F"><rect x="60" y="80" width="40" height="60" rx="20"/><rect x="130" y="70" width="40" height="70" rx="20"/><rect x="200" y="86" width="40" height="54" rx="20"/></g>
+                <g fill="#FFB703"><circle cx="80" cy="70" r="12"/><circle cx="150" cy="60" r="12"/><circle cx="220" cy="76" r="12"/></g>
+                <path d="M270 60 a18 18 0 1 0 0.1 0" fill="none" stroke="#C1440E" stroke-width="3"/>
+              </svg>
+              <div class="event__date"><span class="event__day">10</span><span class="event__month">janv.</span></div>
+              <span class="chip chip--type event__type">Sport</span>
+            </div>
+            <div class="event__body">
+              <h3 class="event__title">Foulées de la galette</h3>
+              <div class="event__meta">
+                <span><i data-lucide="clock"></i>9 h 30 · Course familiale 5 km</span>
+                <span><i data-lucide="map-pin"></i>Beauvais · <b class="distance">24 km</b></span>
+                <span><i data-lucide="users-round"></i>Club d'athlétisme</span>
+              </div>
+            </div>
+          </article>
+
+          <aside class="event__more">
+            <i data-lucide="calendar-plus" style="width:2rem;height:2rem;color:var(--solar)"></i>
+            <div>
+              <h3 style="font-size:1.4rem;letter-spacing:-.02em;margin-bottom:8px">Vous organisez un événement&nbsp;?</h3>
+              <p style="opacity:.8;font-size:.95rem">Associations et professionnels peuvent proposer leurs événements. Chaque proposition est validée avant publication.</p>
+            </div>
+            <a class="btn btn--solar" href="agenda.html#proposer">Proposer un événement <i data-lucide="arrow-right" data-arrow></i></a>
+          </aside>
+        </div>
+
+        <p class="container agenda__disclaimer">Événements présentés à titre d'exemple — données fictives pour la démonstration.</p>
+      </div>
+    </section>
+
+    <!-- ============ PARCOURS ============ -->
+    <section class="section journey" aria-labelledby="journey-title">
+      <div class="container">
+        <div class="section-head" data-reveal-group style="text-align:center;justify-items:center">
+          <p class="eyebrow"><span class="eyebrow__dot" aria-hidden="true"></span>08 — Exemple de parcours</p>
+          <h2 class="section-title" id="journey-title">De la recherche <em>à la contribution.</em></h2>
+          <p class="section-lead">Une association de parents d'élèves organise une vente de sapins. Voici comment Locana l'accompagne, sans paiement en ligne.</p>
+        </div>
+
+        <div class="journey__wrap">
+          <svg class="journey__path" viewBox="0 0 120 1000" preserveAspectRatio="none" aria-hidden="true">
+            <path class="jp-base" d="M60 0 C110 80 10 170 60 250 C110 330 10 420 60 500 C110 580 10 670 60 750 C110 830 10 920 60 1000"/>
+            <path class="jp-draw" d="M60 0 C110 80 10 170 60 250 C110 330 10 420 60 500 C110 580 10 670 60 750 C110 830 10 920 60 1000"/>
+          </svg>
+
+          <ol class="journey__steps">
+            <li class="jstep">
+              <div class="jstep__node"><i data-lucide="search"></i></div>
+              <div class="jstep__card">
+                <span class="jstep__num">01 · Recherche</span>
+                <h3 class="jstep__title">«&nbsp;Sapins de Noël&nbsp;» dans 30&nbsp;km</h3>
+                <p class="jstep__text">L'association choisit la catégorie Fleurs, plantes &amp; saisonnier et sa commune.</p>
+              </div>
+            </li>
+            <li class="jstep">
+              <div class="jstep__node"><i data-lucide="map"></i></div>
+              <div class="jstep__card">
+                <span class="jstep__num">02 · Découverte</span>
+                <h3 class="jstep__title">Des pros proches, même au-delà du département</h3>
+                <p class="jstep__text">Elle consulte les fiches, les zones de livraison et les conditions proposées.</p>
+              </div>
+            </li>
+            <li class="jstep">
+              <div class="jstep__node"><i data-lucide="send"></i></div>
+              <div class="jstep__card">
+                <span class="jstep__num">03 · Invitation</span>
+                <h3 class="jstep__title">Un producteur n'est pas encore inscrit&nbsp;?</h3>
+                <p class="jstep__text">L'association le recommande à l'équipe ou lui envoie un lien d'invitation.</p>
+              </div>
+            </li>
+            <li class="jstep">
+              <div class="jstep__node"><i data-lucide="shield-check"></i></div>
+              <div class="jstep__card">
+                <span class="jstep__num">04 · Validation</span>
+                <h3 class="jstep__title">Profil vérifié, puis publié</h3>
+                <p class="jstep__text">Le professionnel complète sa fiche&nbsp;; la plateforme contrôle avant mise en ligne.</p>
+              </div>
+            </li>
+            <li class="jstep">
+              <div class="jstep__node"><i data-lucide="ticket-percent"></i></div>
+              <div class="jstep__card">
+                <span class="jstep__num">05 · Offre</span>
+                <h3 class="jstep__title">Réduction familles et contribution association</h3>
+                <p class="jstep__text">Le professionnel fixe ses taux, ses dates de validité et ses conditions.</p>
+              </div>
+            </li>
+            <li class="jstep">
+              <div class="jstep__node"><i data-lucide="chart-no-axes-column-increasing"></i></div>
+              <div class="jstep__card">
+                <span class="jstep__num">06 · Suivi</span>
+                <h3 class="jstep__title">Chaque vente déclarée, chaque euro visible</h3>
+                <p class="jstep__text">Les familles donnent le code, le pro enregistre la vente, l'association suit ses contributions.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ REPÈRES ============ -->
+    <section class="facts" aria-label="Repères">
+      <div class="container facts__grid">
+        <div class="fact" data-reveal><span class="fact__value"><span data-count="7">7</span></span><span class="fact__label">grandes catégories, administrables et évolutives</span></div>
+        <div class="fact" data-reveal><span class="fact__value"><span data-count="100">100</span><small>km</small></span><span class="fact__label">de rayon maximum, de 10 à 100&nbsp;km</span></div>
+        <div class="fact" data-reveal><span class="fact__value"><span data-count="0">0</span><small>€</small></span><span class="fact__label">d'inscription pour les associations et les pros</span></div>
+        <div class="fact" data-reveal><span class="fact__value"><span data-count="3">3</span></span><span class="fact__label">montants toujours calculés et affichés séparément</span></div>
+      </div>
+    </section>
+
+    <!-- ============ CTA ============ -->
+    <section class="cta" aria-labelledby="cta-title">
+      <div class="container">
+        <div class="cta__panel">
+          <div class="cta__sun" aria-hidden="true"></div>
+          <svg class="cta__hills" viewBox="0 0 1200 300" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M0 200 C200 150 400 210 600 170 S1000 140 1200 170 V300 H0Z" fill="#82CBA3"/>
+            <path d="M0 250 C240 210 480 260 720 230 S1080 210 1200 230 V300 H0Z" fill="#2D6A4F"/>
+          </svg>
+          <div class="cta__copy" data-reveal-group>
+            <p class="eyebrow"><span class="eyebrow__dot" aria-hidden="true"></span>Rejoindre le pilote</p>
+            <h2 class="section-title" id="cta-title">Faisons pousser <em>le local</em> ensemble.</h2>
+            <p class="section-lead">Le pilote démarre dans l'Oise et les communes limitrophes, avec un petit groupe d'associations et de professionnels volontaires.</p>
+            <div class="cta__list">
+              <span><i data-lucide="check"></i>Inscription gratuite</span>
+              <span><i data-lucide="check"></i>Validation manuelle</span>
+              <span><i data-lucide="check"></i>Sans abonnement</span>
+            </div>
+          </div>
+          <div class="cta__cards">
+            <a class="cta-card glass" href="inscription.html?profil=association" data-reveal>
+              <span class="cta-card__icon"><i data-lucide="users-round"></i></span>
+              <span><span class="cta-card__title">J'inscris mon association</span><br><span class="cta-card__text">Code partenaire, recherche, suivi des contributions</span></span>
+              <span class="cta-card__arrow"><i data-lucide="arrow-right"></i></span>
+            </a>
+            <a class="cta-card glass" href="inscription.html?profil=professionnel" data-reveal>
+              <span class="cta-card__icon"><i data-lucide="store"></i></span>
+              <span><span class="cta-card__title">Je suis un professionnel</span><br><span class="cta-card__text">Vitrine, offres partenaires, déclaration des ventes</span></span>
+              <span class="cta-card__arrow"><i data-lucide="arrow-right"></i></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__about">
+          <a class="brand" href="index.html" aria-label="Locana, accueil">
+            <svg class="brand__mark" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="18" fill="#FFB703"/><path d="M20 31 C12 26 12 15 20 9 C28 15 28 26 20 31 Z" fill="#2D6A4F"/><path d="M20 30 V16" stroke="#FFF8E7" stroke-width="1.6" stroke-linecap="round"/></svg>
+            <span>Locana</span>
+          </a>
+          <p>La plateforme indépendante qui relie associations, commerces et producteurs de proximité. Nom de travail — pilote dans l'Oise et les territoires limitrophes.</p>
+        </div>
+        <div>
+          <p class="footer__title">Plateforme</p>
+          <ul class="footer__links">
+            <li><a href="annuaire.html">Trouver un pro</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="agenda.html">Vie locale</a></li>
+            <li><a href="a-propos.html">À propos</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__title">Espaces</p>
+          <ul class="footer__links">
+            <li><a href="inscription.html?profil=association">Association</a></li>
+            <li><a href="inscription.html?profil=professionnel">Professionnel</a></li>
+            <li><a href="connexion.html">Se connecter</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__title">Informations</p>
+          <ul class="footer__links">
+            <li><a href="#">Conditions d'utilisation <span class="pill-soon">bientôt</span></a></li>
+            <li><a href="#">Confidentialité &amp; RGPD <span class="pill-soon">bientôt</span></a></li>
+            <li><a href="#">Règles de référencement <span class="pill-soon">bientôt</span></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© 2026 Locana — prototype</span>
+        <span>Sans fil public, sans commentaires, sans publicité intrusive.</span>
+      </div>
+      <div class="footer__word" aria-hidden="true">Locana</div>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"><i data-lucide="info"></i><span class="toast__text"></span></div>
+  <div class="page-veil" aria-hidden="true"></div>
+
+  <script src="assets/vendor/gsap.min.js"></script>
+  <script src="assets/vendor/ScrollTrigger.min.js"></script>
+  <script src="assets/vendor/lenis.min.js"></script>
+  <script src="assets/js/icons.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
