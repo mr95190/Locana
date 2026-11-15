@@ -55,7 +55,8 @@
     if (!a) return;
     var id = a.getAttribute('href');
     if (id.length < 2) { e.preventDefault(); return; }
-    var target = document.querySelector(id);
+    var target = null;
+    try { target = document.querySelector(id); } catch (err) { return; } // routes internes (#messages/12…)
     if (!target) return;
     e.preventDefault();
     closeMenu();
@@ -599,8 +600,8 @@
      --------------------------------------------------------------- */
   function reveals() {
     // Éléments isolés
-    gsap.set('[data-reveal]', { y: 16, opacity: 0 });
-    ScrollTrigger.batch('[data-reveal]', {
+    if ($$('[data-reveal]').length) gsap.set('[data-reveal]', { y: 16, opacity: 0 });
+    if ($$('[data-reveal]').length) ScrollTrigger.batch('[data-reveal]', {
       start: 'top 88%',
       onEnter: function (els) { gsap.to(els, { y: 0, opacity: 1, duration: 0.54, stagger: 0.12, ease: 'power2.out', overwrite: true }); }
     });

@@ -1,0 +1,175 @@
+    <section class="auth" aria-labelledby="reg-title">
+{{AUTH_ASIDE}}
+      <div class="auth__main">
+        <div class="auth__card auth__card--wide" id="reg">
+          <div data-ph-fade>
+            <h1 class="auth__title" id="reg-title">Créer votre compte</h1>
+            <p class="auth__sub">Inscription gratuite. Chaque profil est vérifié par l’équipe avant d’être publié.</p>
+          </div>
+          <ol class="stepper" aria-label="Étapes de l’inscription" data-ph-fade>
+            <li class="is-current" data-step-label="1">1. Profil</li>
+            <li data-step-label="2">2. Structure</li>
+            <li data-step-label="3">3. Contact</li>
+            <li data-step-label="4">4. Validation</li>
+          </ol>
+
+          <form class="form-card" id="reg-form" novalidate data-ph-fade>
+            <p class="form-alert" aria-live="assertive"><i data-lucide="info"></i><span></span></p>
+
+            <!-- Étape 1 -->
+            <fieldset class="step" data-step="1" style="border:0;padding:0;margin:0">
+              <legend class="step__title">Vous inscrivez…</legend>
+              <div class="choices field">
+                <label class="choice">
+                  <input type="radio" name="role" value="association">
+                  <span class="choice__check"><i data-lucide="check"></i></span>
+                  <span class="choice__icon"><i data-lucide="users-round"></i></span>
+                  <span class="choice__title">Une association</span>
+                  <span class="choice__text">Parents d’élèves, club sportif, culturel ou solidaire, comité des fêtes…</span>
+                </label>
+                <label class="choice">
+                  <input type="radio" name="role" value="professionnel">
+                  <span class="choice__check"><i data-lucide="check"></i></span>
+                  <span class="choice__icon"><i data-lucide="store"></i></span>
+                  <span class="choice__title">Une entreprise</span>
+                  <span class="choice__text">Commerçant, artisan, producteur, prestataire de loisirs ou de services…</span>
+                </label>
+                <span class="field__error" style="grid-column:1/-1"><i data-lucide="info"></i><span></span></span>
+              </div>
+              <div class="step__nav"><span></span><button class="btn btn--lg" type="button" data-next>Continuer <i data-lucide="arrow-right" data-arrow></i></button></div>
+            </fieldset>
+
+            <!-- Étape 2 -->
+            <fieldset class="step" data-step="2" hidden style="border:0;padding:0;margin:0">
+              <legend class="step__title" data-role-text="Votre association|Votre entreprise">Votre association</legend>
+              <div class="fields">
+                <label class="field full">
+                  <span class="field__label" data-role-text="Nom de l’association|Nom commercial">Nom de l’association</span>
+                  <input class="field__input" type="text" name="structureName" maxlength="120" autocomplete="organization" required>
+                  <span class="field__error"><i data-lucide="info"></i><span></span></span>
+                </label>
+                <label class="field full" data-only="professionnel" hidden>
+                  <span class="field__label">Catégorie principale</span>
+                  <select class="field__input" name="category">
+                    <option value="">Choisir…</option>
+                    <option value="alimentation">Alimentation &amp; produits gourmands</option>
+                    <option value="fleurs">Fleurs, plantes &amp; saisonnier</option>
+                    <option value="beaute">Beauté &amp; bien-être</option>
+                    <option value="artisanat">Artisanat &amp; créations</option>
+                    <option value="loisirs">Loisirs, sport &amp; culture</option>
+                    <option value="evenementiel">Événementiel &amp; fournitures</option>
+                    <option value="services">Artisans &amp; services</option>
+                  </select>
+                  <span class="field__error"><i data-lucide="info"></i><span></span></span>
+                </label>
+                <label class="field full">
+                  <span class="field__label" data-role-text="Objet de l’association|Activité et produits proposés <span class='opt'>(facultatif)</span>">Objet de l’association</span>
+                  <textarea class="field__input field__input--area" name="description" maxlength="600" style="min-height:110px" placeholder="En quelques mots : ce que fait votre structure."></textarea>
+                  <span class="field__error"><i data-lucide="info"></i><span></span></span>
+                </label>
+                <label class="field">
+                  <span class="field__label" data-role-text="N° RNA ou SIREN <span class='opt'>(facultatif)</span>|N° SIRET <span class='opt'>(facultatif)</span>">N° RNA ou SIREN <span class="opt">(facultatif)</span></span>
+                  <input class="field__input" type="text" name="registrationNumber" maxlength="20">
+                  <span class="field__hint">Accélère la vérification de votre profil.</span>
+                  <span class="field__error"><i data-lucide="info"></i><span></span></span>
+                </label>
+                <label class="field">
+                  <span class="field__label">Site internet <span class="opt">(facultatif)</span></span>
+                  <input class="field__input" type="url" name="website" maxlength="200" inputmode="url" placeholder="www.exemple.fr">
+                  <span class="field__error"><i data-lucide="info"></i><span></span></span>
+                </label>
+                <label class="field">
+                  <span class="field__label">Commune</span>
+                  <input class="field__input" type="text" name="commune" maxlength="80" autocomplete="address-level2" required>
+                  <span class="field__error"><i data-lucide="info"></i><span></span></span>
+                </label>
+                <label class="field">
+                  <span class="field__label">Code postal</span>
+                  <input class="field__input" type="text" name="postalCode" maxlength="5" inputmode="numeric" autocomplete="postal-code" required>
+                  <span class="field__error"><i data-lucide="info"></i><span></span></span>
+                </label>
+              </div>
+              <div class="step__nav"><button class="btn btn--ghost btn--lg" type="button" data-prev>Retour</button><button class="btn btn--lg" type="button" data-next>Continuer <i data-lucide="arrow-right" data-arrow></i></button></div>
+            </fieldset>
+
+            <!-- Étape 3 -->
+            <fieldset class="step" data-step="3" hidden style="border:0;padding:0;margin:0">
+              <legend class="step__title">La personne référente</legend>
+              <div class="fields">
+                <label class="field">
+                  <span class="field__label">Prénom et nom</span>
+                  <input class="field__input" type="text" name="contactName" maxlength="80" autocomplete="name" required>
+                  <span class="field__error"><i data-lucide="info"></i><span></span></span>
+                </label>
+                <label class="field">
+                  <span class="field__label">Fonction <span class="opt">(facultatif)</span></span>
+                  <input class="field__input" type="text" name="contactRole" maxlength="60" placeholder="Présidente, trésorier, gérant…">
+                  <span class="field__error"><i data-lucide="info"></i><span></span></span>
+                </label>
+                <label class="field">
+                  <span class="field__label">Adresse e-mail</span>
+                  <input class="field__input" type="email" name="email" maxlength="254" autocomplete="email" inputmode="email" required>
+                  <span class="field__hint">Elle servira d’identifiant de connexion.</span>
+                  <span class="field__error"><i data-lucide="info"></i><span></span></span>
+                </label>
+                <label class="field">
+                  <span class="field__label">Téléphone <span class="opt">(facultatif)</span></span>
+                  <input class="field__input" type="tel" name="phone" maxlength="30" autocomplete="tel" inputmode="tel">
+                  <span class="field__hint">Visible uniquement par l’équipe Locana.</span>
+                  <span class="field__error"><i data-lucide="info"></i><span></span></span>
+                </label>
+                <div class="field">
+                  <label class="field__label" for="reg-pw">Mot de passe</label>
+                  <div class="pw-wrap">
+                    <input class="field__input" id="reg-pw" type="password" name="password" autocomplete="new-password" minlength="10" required data-meter="reg-meter">
+                    <button class="pw-toggle" type="button" aria-label="Afficher le mot de passe" aria-pressed="false"><i data-lucide="eye"></i></button>
+                  </div>
+                  <div class="pw-meter" id="reg-meter" aria-hidden="true"><span></span></div>
+                  <span class="field__hint">10 caractères minimum, lettres et chiffres.</span>
+                  <span class="field__error"><i data-lucide="info"></i><span></span></span>
+                </div>
+                <label class="field">
+                  <span class="field__label">Confirmez le mot de passe</span>
+                  <input class="field__input" type="password" name="confirm" autocomplete="new-password" required>
+                  <span class="field__error"><i data-lucide="info"></i><span></span></span>
+                </label>
+              </div>
+              <div class="step__nav"><button class="btn btn--ghost btn--lg" type="button" data-prev>Retour</button><button class="btn btn--lg" type="button" data-next>Vérifier <i data-lucide="arrow-right" data-arrow></i></button></div>
+            </fieldset>
+
+            <!-- Étape 4 -->
+            <fieldset class="step" data-step="4" hidden style="border:0;padding:0;margin:0">
+              <legend class="step__title">Vérifiez vos informations</legend>
+              <dl class="recap" id="recap"></dl>
+              <div class="gdpr-box">
+                <strong><i data-lucide="lock"></i>Ce que nous faisons de vos données</strong>
+                <ul>
+                  <li>Elles servent uniquement à vérifier votre profil, gérer votre compte et échanger avec vous.</li>
+                  <li>Le téléphone et l’e-mail ne sont jamais rendus publics ni transmis à des tiers.</li>
+                  <li>En cas de refus, la demande est supprimée automatiquement au bout de 90 jours.</li>
+                  <li>Vous pouvez télécharger ou supprimer vos données à tout moment depuis votre espace.</li>
+                </ul>
+              </div>
+              <div class="field">
+                <label class="check"><input type="checkbox" name="consent" required><span>J’ai lu la <a class="link" href="confidentialite.html" target="_blank" rel="noopener">politique de confidentialité</a> et j’accepte que ces informations soient utilisées pour créer et gérer mon compte.</span></label>
+                <span class="field__error"><i data-lucide="info"></i><span></span></span>
+              </div>
+              <div class="step__nav"><button class="btn btn--ghost btn--lg" type="button" data-prev>Modifier</button><button class="btn btn--solar btn--lg magnetic" type="submit">Envoyer ma demande <i data-lucide="send" data-arrow></i></button></div>
+            </fieldset>
+          </form>
+
+          <div class="form-card done" id="reg-done" hidden tabindex="-1">
+            <svg class="success__icon" viewBox="0 0 96 96" aria-hidden="true"><circle cx="48" cy="48" r="44" fill="#DDF1E5"/><circle class="success__ring" cx="48" cy="48" r="44" fill="none" stroke="#52B788" stroke-width="3"/><path class="success__check" d="M30 49 l12 12 l24 -26" fill="none" stroke="#2D6A4F" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <h2 class="form__title">Demande envoyée, merci !</h2>
+            <p style="color:var(--ink-soft);max-width:46ch">L’équipe va examiner votre profil. Un e-mail de confirmation vient de partir vers l’adresse indiquée.</p>
+            <ol class="done__steps">
+              <li><span>1</span><span>Vérification de votre profil par l’équipe Locana.</span></li>
+              <li><span>2</span><span>Si besoin, nous vous écrivons dans la messagerie de votre espace.</span></li>
+              <li><span>3</span><span>Après validation, vous recevez un e-mail et accédez à toutes les fonctions.</span></li>
+            </ol>
+            <a class="btn btn--lg" href="connexion.html">Me connecter pour suivre ma demande</a>
+          </div>
+          <p class="auth__alt">Déjà inscrit ? <a href="connexion.html">Se connecter</a></p>
+        </div>
+      </div>
+    </section>

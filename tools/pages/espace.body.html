@@ -1,0 +1,126 @@
+    <div class="container app" id="app" hidden>
+      <aside class="app-side">
+        <div class="app-who"><span class="app-who__avatar" data-me="initials">?</span><div><div class="app-who__name" data-me="structure">…</div><div class="app-who__role" data-me="role"></div></div></div>
+        <nav class="app-nav" aria-label="Mon espace">
+          <a href="#tableau" data-view-link="tableau"><i data-lucide="layout-dashboard"></i>Tableau de bord<span></span></a>
+          <a href="#messages" data-view-link="messages"><i data-lucide="message-square-text"></i>Messages<span class="count" data-badge="unread" hidden>0</span></a>
+          <a href="#profil" data-view-link="profil"><i data-lucide="user-round-pen"></i>Mon profil<span></span></a>
+          <a href="#donnees" data-view-link="donnees"><i data-lucide="lock"></i>Mes données<span></span></a>
+        </nav>
+        <button class="app-logout" type="button" data-logout><i data-lucide="log-out"></i>Se déconnecter</button>
+      </aside>
+
+      <main class="app-main" id="contenu">
+        <!-- Tableau de bord -->
+        <section class="view" data-view="tableau" aria-labelledby="t-title">
+          <div class="view__head"><div><h1 class="view__title" id="t-title">Bonjour <span data-me="firstname"></span></h1><p class="view__sub" data-me="structureLine"></p></div></div>
+          <div class="banner" id="status-banner"><span class="banner__icon"></span><div><p class="banner__title"></p><p class="banner__text"></p></div></div>
+          <ol class="track" id="track" aria-label="Avancement de l’inscription">
+            <li>Demande reçue</li><li>Vérification par l’équipe</li><li>Profil validé</li>
+          </ol>
+          <div class="grid-2">
+            <div class="panel panel--green code-card" id="code-card" hidden>
+              <p class="eyebrow" style="color:var(--solar)">Code partenaire</p>
+              <div class="code-card__code" data-me="code"></div>
+              <p style="opacity:.8;font-size:.92rem">Les familles le présentent chez les professionnels partenaires. Le professionnel enregistre la vente, la contribution apparaît dans votre suivi.</p>
+              <div class="actions"><button class="btn btn--solar btn--sm" type="button" data-copy-code><i data-lucide="copy"></i>Copier</button><button class="btn btn--ghost-light btn--sm" type="button" data-print><i data-lucide="printer"></i>Imprimer</button></div>
+            </div>
+            <div class="panel" id="next-panel">
+              <h2 class="panel__title"><i data-lucide="compass"></i>Pour commencer</h2>
+              <div class="quick">
+                <a href="#messages"><span class="q-icon"><i data-lucide="message-square-text"></i></span><span>Écrire à l’équipe<small>Une question, un justificatif à transmettre</small></span><i data-lucide="arrow-right"></i></a>
+                <a href="annuaire.html"><span class="q-icon"><i data-lucide="search"></i></span><span>Trouver un professionnel<small>Par commune et rayon</small></span><i data-lucide="arrow-right"></i></a>
+                <a href="#profil"><span class="q-icon"><i data-lucide="user-round-pen"></i></span><span>Compléter mon profil<small>Informations de la structure</small></span><i data-lucide="arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Messages -->
+        <section class="view" data-view="messages" hidden aria-labelledby="m-title">
+          <div class="view__head"><div><h1 class="view__title" id="m-title">Messages</h1><p class="view__sub">Échangez en privé avec l’équipe Locana. Seuls vous et l’équipe voyez cette conversation.</p></div></div>
+          <div class="chat" id="member-chat">
+            <div class="chat__head"><div class="chat__who"><span class="chat__avatar"><i data-lucide="sprout"></i></span><div><strong>Équipe Locana</strong><small>Réponse par e-mail de notification</small></div></div></div>
+            <div class="chat__list" aria-live="polite" data-lenis-prevent></div>
+            <form class="composer" novalidate>
+              <label class="sr-only" for="member-compose">Votre message</label>
+              <textarea id="member-compose" name="body" rows="1" maxlength="4000" placeholder="Écrivez votre message…" required></textarea>
+              <button class="btn" type="submit"><i data-lucide="send"></i><span class="sr-only">Envoyer</span></button>
+              <span class="composer__hint">Entrée pour envoyer · Maj + Entrée pour aller à la ligne. Ne transmettez pas de données sensibles (santé, coordonnées bancaires…).</span>
+            </form>
+          </div>
+        </section>
+
+        <!-- Profil -->
+        <section class="view" data-view="profil" hidden aria-labelledby="p-title">
+          <div class="view__head"><div><h1 class="view__title" id="p-title">Mon profil</h1><p class="view__sub">Ces informations sont vérifiées par l’équipe. Vous pouvez les corriger à tout moment (droit de rectification).</p></div></div>
+          <form class="panel" id="profile-form" novalidate>
+            <p class="form-alert" aria-live="polite"><i data-lucide="info"></i><span></span></p>
+            <div class="fields">
+              <label class="field full"><span class="field__label">Nom de la structure</span><input class="field__input" name="structureName" maxlength="120" required><span class="field__error"><i data-lucide="info"></i><span></span></span></label>
+              <label class="field full" data-only="professionnel" hidden><span class="field__label">Catégorie principale</span>
+                <select class="field__input" name="category"><option value="">Choisir…</option><option value="alimentation">Alimentation &amp; produits gourmands</option><option value="fleurs">Fleurs, plantes &amp; saisonnier</option><option value="beaute">Beauté &amp; bien-être</option><option value="artisanat">Artisanat &amp; créations</option><option value="loisirs">Loisirs, sport &amp; culture</option><option value="evenementiel">Événementiel &amp; fournitures</option><option value="services">Artisans &amp; services</option></select>
+                <span class="field__error"><i data-lucide="info"></i><span></span></span></label>
+              <label class="field full"><span class="field__label">Description</span><textarea class="field__input field__input--area" name="description" maxlength="600" style="min-height:110px"></textarea><span class="field__error"><i data-lucide="info"></i><span></span></span></label>
+              <label class="field"><span class="field__label">N° RNA / SIREN / SIRET <span class="opt">(facultatif)</span></span><input class="field__input" name="registrationNumber" maxlength="20"><span class="field__error"><i data-lucide="info"></i><span></span></span></label>
+              <label class="field"><span class="field__label">Site internet <span class="opt">(facultatif)</span></span><input class="field__input" name="website" maxlength="200"><span class="field__error"><i data-lucide="info"></i><span></span></span></label>
+              <label class="field"><span class="field__label">Commune</span><input class="field__input" name="commune" maxlength="80" required><span class="field__error"><i data-lucide="info"></i><span></span></span></label>
+              <label class="field"><span class="field__label">Code postal</span><input class="field__input" name="postalCode" maxlength="5" inputmode="numeric" required><span class="field__error"><i data-lucide="info"></i><span></span></span></label>
+              <label class="field"><span class="field__label">Personne référente</span><input class="field__input" name="contactName" maxlength="80" required><span class="field__error"><i data-lucide="info"></i><span></span></span></label>
+              <label class="field"><span class="field__label">Fonction <span class="opt">(facultatif)</span></span><input class="field__input" name="contactRole" maxlength="60"><span class="field__error"><i data-lucide="info"></i><span></span></span></label>
+              <label class="field"><span class="field__label">Téléphone <span class="opt">(facultatif)</span></span><input class="field__input" name="phone" type="tel" maxlength="30"><span class="field__error"><i data-lucide="info"></i><span></span></span></label>
+              <div class="field"><span class="field__label">Adresse e-mail</span><input class="field__input" data-me-input="email" disabled><span class="field__hint">Pour la modifier, écrivez à l’équipe via la messagerie.</span></div>
+            </div>
+            <div class="actions"><button class="btn" type="submit">Enregistrer les modifications</button></div>
+          </form>
+          <form class="panel" id="password-form" novalidate>
+            <h2 class="panel__title"><i data-lucide="key-round"></i>Changer de mot de passe</h2>
+            <p class="form-alert" aria-live="polite"><i data-lucide="info"></i><span></span></p>
+            <div class="fields">
+              <label class="field"><span class="field__label">Mot de passe actuel</span><input class="field__input" type="password" name="current" autocomplete="current-password" required><span class="field__error"><i data-lucide="info"></i><span></span></span></label>
+              <label class="field"><span class="field__label">Nouveau mot de passe</span><input class="field__input" type="password" name="password" autocomplete="new-password" minlength="10" required data-meter="pw-meter"><div class="pw-meter" id="pw-meter" aria-hidden="true"><span></span></div><span class="field__error"><i data-lucide="info"></i><span></span></span></label>
+            </div>
+            <div class="actions"><button class="btn btn--ghost" type="submit">Mettre à jour le mot de passe</button></div>
+          </form>
+        </section>
+
+        <!-- Mes données -->
+        <section class="view" data-view="donnees" hidden aria-labelledby="d-title">
+          <div class="view__head"><div><h1 class="view__title" id="d-title">Mes données</h1><p class="view__sub">Vos droits RGPD : accès, rectification, portabilité et effacement, directement depuis votre espace.</p></div></div>
+          <div class="grid-2">
+            <div class="panel">
+              <h2 class="panel__title"><i data-lucide="database"></i>Ce que nous conservons</h2>
+              <dl class="data-list" id="data-list"></dl>
+              <p style="font-size:.88rem;color:var(--ink-soft)">Un seul cookie est utilisé : il maintient votre connexion (strictement nécessaire, aucune mesure d’audience ni publicité).</p>
+            </div>
+            <div style="display:grid;gap:var(--s3)">
+              <div class="panel">
+                <h2 class="panel__title"><i data-lucide="download"></i>Télécharger mes données</h2>
+                <p style="color:var(--ink-soft);font-size:.93rem">Un fichier JSON lisible contenant votre compte, votre profil et vos messages (droit d’accès et de portabilité).</p>
+                <a class="btn" href="/api/me/export" download><i data-lucide="download"></i>Télécharger (.json)</a>
+              </div>
+              <div class="panel danger-zone">
+                <h2 class="panel__title"><i data-lucide="trash-2"></i>Supprimer mon compte</h2>
+                <p style="color:var(--ink-soft);font-size:.93rem">Votre compte, votre profil et vos messages seront effacés définitivement et immédiatement. Le journal de modération ne conserve qu’une mention anonyme.</p>
+                <button class="btn btn--danger-ghost" type="button" data-delete-open><i data-lucide="trash-2"></i>Supprimer définitivement</button>
+              </div>
+              <p style="font-size:.88rem"><a class="link" href="confidentialite.html">Lire la politique de confidentialité</a></p>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <div class="container offline" id="offline" hidden>
+      <div class="empty"><span class="empty__icon"><i data-lucide="server"></i></span><h1 class="empty__title">Le serveur Locana n’est pas lancé</h1><p>L’espace membre a besoin du serveur. Dans le dossier du site, lancez <code>python server.py</code> puis rechargez cette page.</p></div>
+    </div>
+
+    <dialog class="confirm" id="delete-dialog" aria-labelledby="del-title">
+      <form class="confirm__inner" id="delete-form" novalidate>
+        <h2 class="confirm__title" id="del-title">Supprimer définitivement votre compte ?</h2>
+        <p style="color:var(--ink-soft)">Cette action est irréversible. Saisissez votre mot de passe pour confirmer.</p>
+        <p class="form-alert" aria-live="assertive"><i data-lucide="info"></i><span></span></p>
+        <label class="field"><span class="field__label">Mot de passe</span><input class="field__input" type="password" name="password" autocomplete="current-password" required><span class="field__error"><i data-lucide="info"></i><span></span></span></label>
+        <div class="actions" style="justify-content:flex-end"><button class="btn btn--ghost" type="button" data-close>Annuler</button><button class="btn btn--danger" type="submit">Supprimer mon compte</button></div>
+      </form>
+    </dialog>

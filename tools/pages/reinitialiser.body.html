@@ -1,0 +1,32 @@
+    <section class="auth" aria-labelledby="reset-title">
+{{AUTH_ASIDE}}
+      <div class="auth__main">
+        <div class="auth__card">
+          <div data-ph-fade>
+            <h1 class="auth__title" id="reset-title">Nouveau mot de passe</h1>
+            <p class="auth__sub">Choisissez un mot de passe d’au moins 10 caractères, mêlant lettres et chiffres.</p>
+          </div>
+          <form class="form-card" id="reset-form" novalidate data-ph-fade>
+            <div class="fields">
+              <p class="form-alert full" aria-live="assertive"><i data-lucide="info"></i><span></span></p>
+              <div class="field full">
+                <label class="field__label" for="reset-pw">Nouveau mot de passe</label>
+                <div class="pw-wrap">
+                  <input class="field__input" id="reset-pw" type="password" name="password" autocomplete="new-password" minlength="10" required data-meter="reset-meter">
+                  <button class="pw-toggle" type="button" aria-label="Afficher le mot de passe" aria-pressed="false"><i data-lucide="eye"></i></button>
+                </div>
+                <div class="pw-meter" id="reset-meter" aria-hidden="true"><span></span></div>
+                <span class="field__error"><i data-lucide="info"></i><span></span></span>
+              </div>
+              <label class="field full">
+                <span class="field__label">Confirmez le mot de passe</span>
+                <input class="field__input" type="password" name="confirm" autocomplete="new-password" required>
+                <span class="field__error"><i data-lucide="info"></i><span></span></span>
+              </label>
+              <div class="full"><button class="btn btn--lg" type="submit" style="width:100%">Enregistrer le mot de passe</button></div>
+            </div>
+          </form>
+          <p class="auth__alt"><a href="connexion.html">Retour à la connexion</a></p>
+        </div>
+      </div>
+    </section>

@@ -1,0 +1,106 @@
+    <!-- ============ HERO + RECHERCHE ============ -->
+    <section class="ph ph--compact dir-hero" data-static aria-labelledby="ph-title">
+{{SKY_PLAIN}}
+      <div class="container">
+        <div class="ph__content" style="max-width:820px">
+          <nav class="crumbs" aria-label="Fil d'Ariane" data-ph-fade><a href="index.html">Accueil</a><span aria-hidden="true">/</span><span>Trouver un pro</span></nav>
+          <h1 class="ph__title" id="ph-title">
+            <span class="line"><span class="line__inner">Trouver un</span></span>
+            <span class="line"><span class="line__inner"><em>professionnel près de vous.</em></span></span>
+          </h1>
+          <form class="search" id="dir-search" role="search" aria-label="Rechercher un professionnel" data-ph-fade novalidate>
+            <label class="search__field">
+              <span class="search__label">Que recherchez-vous&nbsp;?</span>
+              <span class="search__input-wrap"><i data-lucide="search"></i>
+                <input class="search__input" type="search" name="q" placeholder="Sapins, chocolats, imprimeur…" autocomplete="off">
+              </span>
+            </label>
+            <label class="search__field search__field--city">
+              <span class="search__label">Autour de quelle ville&nbsp;?</span>
+              <span class="search__input-wrap"><i data-lucide="map-pin"></i>
+                <input class="search__input" type="text" name="ville" list="communes" placeholder="Commune ou code postal" autocomplete="off" aria-describedby="city-error">
+              </span>
+            </label>
+            <label class="search__field search__field--radius">
+              <span class="search__label">Rayon</span>
+              <select class="search__select" name="rayon">
+                <option value="10">10 km</option>
+                <option value="20">20 km</option>
+                <option value="30" selected>30 km</option>
+                <option value="50">50 km</option>
+                <option value="100">100 km</option>
+              </select>
+            </label>
+            <button class="btn btn--solar" type="submit">Rechercher <i data-lucide="arrow-right" data-arrow></i></button>
+          </form>
+          <datalist id="communes"></datalist>
+          <div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center" data-ph-fade>
+            <button class="geo-btn" type="button" id="geo-btn"><i data-lucide="locate-fixed"></i>Utiliser ma position</button>
+            <p class="search__error" id="city-error" role="alert" hidden><i data-lucide="info"></i><span></span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ RÉSULTATS ============ -->
+    <section class="dir" aria-label="Résultats de recherche">
+      <div class="container">
+        <div class="toolbar">
+          <div class="catbar" id="catbar" role="group" aria-label="Filtrer par catégorie"></div>
+          <div class="toolbar__row">
+            <div class="toggles">
+              <label class="switch"><input type="checkbox" id="f-partner">Partenaires associatifs uniquement</label>
+              <label class="switch"><input type="checkbox" id="f-national" checked>Inclure la livraison France entière</label>
+            </div>
+            <div class="toolbar__right">
+              <label class="sort">Trier par
+                <select id="f-sort">
+                  <option value="distance">Distance</option>
+                  <option value="name">Nom</option>
+                  <option value="offer">Contribution la plus élevée</option>
+                </select>
+              </label>
+              <div class="viewtoggle" role="group" aria-label="Affichage">
+                <button type="button" data-view="list" aria-pressed="true"><i data-lucide="list"></i>Liste</button>
+                <button type="button" data-view="map" aria-pressed="false"><i data-lucide="map"></i>Carte</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="dir__summary">
+          <p class="dir__count" id="dir-count" aria-live="polite">Chargement…</p>
+          <button class="dir__reset" type="button" id="dir-reset" hidden>Réinitialiser les filtres</button>
+        </div>
+
+        <div class="dir__layout" id="dir-layout" data-view="list">
+          <div class="results" id="results"></div>
+          <div class="dmap" id="dmap" aria-label="Carte des résultats">
+            <svg id="dmap-svg" aria-hidden="true"></svg>
+            <div class="dmap__tip" id="dmap-tip"></div>
+            <div class="dmap__empty" id="dmap-empty"><i data-lucide="map"></i><p>Indiquez une commune pour afficher les professionnels sur la carte.</p></div>
+            <div class="dmap__overlay glass" id="dmap-overlay" hidden></div>
+          </div>
+        </div>
+
+        <p class="demo-note"><i data-lucide="info"></i><span>Démonstration&nbsp;: les professionnels affichés sont fictifs et la recherche de commune se limite à une sélection de communes de l'Oise et des départements voisins. La version finale s'appuiera sur un service de géocodage et une carte interactive.</span></p>
+
+        <div class="recommend" data-reveal>
+          <svg class="recommend__deco" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="90" fill="none" stroke="#FFB703" stroke-width="2" stroke-dasharray="4 8"/><circle cx="100" cy="100" r="56" fill="#FFB703"/></svg>
+          <div style="display:grid;gap:1rem">
+            <p class="eyebrow" style="color:var(--solar)">Associations</p>
+            <h2 class="section-title">Vous ne trouvez pas <em>le bon pro&nbsp;?</em></h2>
+            <p>Recommandez-le à l'équipe ou invitez-le à créer sa fiche. Il sera publié après inscription et vérification.</p>
+          </div>
+          <div class="recommend__actions">
+            <a class="btn btn--solar btn--lg" href="contact.html?objet=recommander"><i data-lucide="message-square-quote"></i>Recommander un professionnel</a>
+            <a class="btn btn--ghost-light btn--lg" href="services.html#associations">Comment fonctionne l'invitation</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FICHE ============ -->
+    <dialog class="sheet" id="sheet" aria-labelledby="sheet-name">
+      <div class="sheet__scroll" id="sheet-content" data-lenis-prevent></div>
+    </dialog>

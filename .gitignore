@@ -1,0 +1,5 @@
+# Données personnelles et secrets : ne jamais les versionner (RGPD)
+data/
+.env
+__pycache__/
+*.pyc
